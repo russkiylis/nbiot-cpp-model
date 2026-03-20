@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "stepa \n";
+    std::cout << "stepa stepa\n";
     return 0;
 }
