@@ -1,0 +1,137 @@
+\doxysection{Класс Npss\+Generator}
+\hypertarget{class_npss_generator}{}\label{class_npss_generator}\index{NpssGenerator@{NpssGenerator}}
+
+
+Генератор NPSS (Narrowband Primary Synchronization Signal) последовательности  
+
+
+
+
+{\ttfamily \+\#include $<$Npss\+Generator.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_npss_generator_af9caf10f6589e2d103fd3afb9d17d0ae}{Npss\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_npss_generator}{Npss\+Generator}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_npss_generator_a725ad46ad808cc49edb723ac9adb78b7}{\texorpdfstring{$\sim$}{\string~}\+Npss\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{class_npss_generator}{Npss\+Generator}. \end{DoxyCompactList}\item 
+const std::\+array$<$ std::\+complex$<$ float $>$, 121 $>$ \& \doxymbox{\hyperlink{class_npss_generator_a997385bf0237215f551520243e320d4e}{get\+Npss\+Sequence}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает сгенерированную NPSS-\/последовательность. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Статические защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \doxymbox{\hyperlink{class_npss_generator_a7ada3d20e7581ed915899d5be56903ee}{root\+\_\+index\+\_\+}} = 5
+\begin{DoxyCompactList}\small\item\em Корневой индекс u для генерации NPSS с помощью последовательности Задова-\/Чу \end{DoxyCompactList}\item 
+static constexpr std::\+array$<$ int, 11 $>$ \doxymbox{\hyperlink{class_npss_generator_a07d67c6e7827f35cdf432a131a84a1e9}{s\+\_\+}} = \{1, 1, 1, 1, -\/1, -\/1, 1, 1, 1, -\/1, 1\}
+\begin{DoxyCompactList}\small\item\em Массив множителей S(l) для генерации NPSS, где l -\/ индекс OFDM-\/символа Длина массива соответствует количеству OFDM-\/символов в сабфрейме с NPSS (11 символов из 14). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Генератор NPSS (Narrowband Primary Synchronization Signal) последовательности 
+
+Генерирует NPSS последовательность для первичной грубой синхронизации в NB-\/\+IoT. Последовательность строится на основе последовательности Задова-\/Чу:\+
+
+\[  d_l(n) = S(l) \cdot e^{-j \frac{\pi u n(n+1)}{11}}, \quad n = 0, 1, \ldots, 10
+\]
+
+где:\+
+\begin{DoxyItemize}
+\item $ u = 5 $ — корневой индекс последовательности Задова-\/Чу
+\item $ S(l) $ — множитель, зависящий от индекса OFDM-\/символа $ l $ (Table 10.\+2.\+7.\+1.\+1-\/1)
+\item $ n $ — индекс элемента внутри одного OFDM-\/символа
+\end{DoxyItemize}
+
+Полная NPSS последовательность длиной 121 элемент формируется из 11 OFDM-\/символов по 11 элементов в каждом.
+
+\begin{DoxySeeAlso}{См. также}
+3GPP TS 36.\+211 V17.\+0.\+0, Section 10.\+2.\+7.\+1.\+1 "{}\+Sequence generation"{} 
+
+\href{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2425}{\texttt{https:\+/\+/\+portal.\+3gpp.\+org/\+desktopmodules/\+\+Specifications/\+\+Specification\+Details.\+aspx?specification\+Id=2425}} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_npss_generator_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_npss_generator_af9caf10f6589e2d103fd3afb9d17d0ae}\index{NpssGenerator@{NpssGenerator}!NpssGenerator@{NpssGenerator}}
+\index{NpssGenerator@{NpssGenerator}!NpssGenerator@{NpssGenerator}}
+\doxysubsubsection{\texorpdfstring{NpssGenerator()}{NpssGenerator()}}
+{\footnotesize\ttfamily \label{class_npss_generator_af9caf10f6589e2d103fd3afb9d17d0ae} 
+Npss\+Generator::\+\+Npss\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Конструктор класса \doxylink{class_npss_generator}{Npss\+Generator}. 
+
+\Hypertarget{class_npss_generator_a725ad46ad808cc49edb723ac9adb78b7}\index{NpssGenerator@{NpssGenerator}!````~NpssGenerator@{\texorpdfstring{$\sim$}{\string~}NpssGenerator}}
+\index{````~NpssGenerator@{\texorpdfstring{$\sim$}{\string~}NpssGenerator}!NpssGenerator@{NpssGenerator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NpssGenerator()}{\string~NpssGenerator()}}
+{\footnotesize\ttfamily \label{class_npss_generator_a725ad46ad808cc49edb723ac9adb78b7} 
+Npss\+Generator::\+\texorpdfstring{$\sim$}{\string~}\+Npss\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Деструктор класса \doxylink{class_npss_generator}{Npss\+Generator}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_npss_generator_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_npss_generator_a997385bf0237215f551520243e320d4e}\index{NpssGenerator@{NpssGenerator}!getNpssSequence@{getNpssSequence}}
+\index{getNpssSequence@{getNpssSequence}!NpssGenerator@{NpssGenerator}}
+\doxysubsubsection{\texorpdfstring{getNpssSequence()}{getNpssSequence()}}
+{\footnotesize\ttfamily \label{class_npss_generator_a997385bf0237215f551520243e320d4e} 
+const std::\+array$<$ std::\+complex$<$ float $>$, 121 $>$ \& Npss\+Generator::\+get\+Npss\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает сгенерированную NPSS-\/последовательность. 
+
+Последовательность вычисляется при первом вызове и кэшируется на всё время жизни программы (static const + лямбда-\/инициализация).
+
+Формула (3GPP TS 36.\+211, 10.\+2.\+7.\+1):\+   \[  d_l(n) = S(l) \cdot e^{-j \frac{\pi u n(n+1)}{11}}, \quad n = 0, 1, \ldots, 10
+\]
+
+где:\+
+\begin{DoxyItemize}
+\item $ u = 5 $ — корневой индекс последовательности Задова-\/Чу
+\item $ S(l) $ — множитель, зависящий от индекса OFDM-\/символа $ l $ (Table 10.\+2.\+7.\+1.\+1-\/1)
+\item $ n $ — индекс элемента внутри одного OFDM-\/символа
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Возвращает}
+Константная ссылка на std::\+array из 121 комплексных отсчётов. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_npss_generator_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{class_npss_generator_a7ada3d20e7581ed915899d5be56903ee}\index{NpssGenerator@{NpssGenerator}!root\_index\_@{root\_index\_}}
+\index{root\_index\_@{root\_index\_}!NpssGenerator@{NpssGenerator}}
+\doxysubsubsection{\texorpdfstring{root\_index\_}{root\_index\_}}
+{\footnotesize\ttfamily \label{class_npss_generator_a7ada3d20e7581ed915899d5be56903ee} 
+int Npss\+Generator::\+root\+\_\+index\+\_\+ = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+Корневой индекс u для генерации NPSS с помощью последовательности Задова-\/Чу 
+
+\Hypertarget{class_npss_generator_a07d67c6e7827f35cdf432a131a84a1e9}\index{NpssGenerator@{NpssGenerator}!s\_@{s\_}}
+\index{s\_@{s\_}!NpssGenerator@{NpssGenerator}}
+\doxysubsubsection{\texorpdfstring{s\_}{s\_}}
+{\footnotesize\ttfamily \label{class_npss_generator_a07d67c6e7827f35cdf432a131a84a1e9} 
+std::\+array$<$int, 11$>$ Npss\+Generator::\+s\+\_\+ = \{1, 1, 1, 1, -\/1, -\/1, 1, 1, 1, -\/1, 1\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+Массив множителей S(l) для генерации NPSS, где l -\/ индекс OFDM-\/символа Длина массива соответствует количеству OFDM-\/символов в сабфрейме с NPSS (11 символов из 14). 
+
+
+
+Объявления и описания членов классов находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+include/\+sync/\+\doxymbox{\hyperlink{_npss_generator_8h}{Npss\+Generator.\+h}}\item 
+src/\+sync/\+\doxymbox{\hyperlink{_npss_generator_8cpp}{Npss\+Generator.\+cpp}}\end{DoxyCompactItemize}

@@ -11,8 +11,11 @@ project(NBIoT_CPP_Model
 )
 
 # Установка стандарта C++
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Добавление флагов компиляции для включения всех предупреждений
+add_compile_options(-Wall -Wextra)
 
 # Сбор файлов исходного кода
 file(GLOB_RECURSE SOURCES "src/*.cpp")
@@ -22,3 +25,5 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Указание места поиска заголовочных файлов
 target_include_directories(${PROJECT_NAME} PRIVATE "include")
+
+

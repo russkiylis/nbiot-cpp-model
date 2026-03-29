@@ -1,0 +1,8 @@
+\_form#0=236x19:\[  d_l(n) = S(l) \cdot e^{-j \frac{\pi u n(n+1)}{11}}, \quad n = 0, 1, \ldots, 10
+\]
+\_form#1=31x9:$ u = 5 $
+\_form#2=21x14:$ S(l) $
+\_form#3=4x10:$ l $
+\_form#4=9x6:$ n $
+\_form#5=178x19:\[  S(l \cdot 11 + n) = S_{c}(l) \cdot e^{-j \frac{\pi u n (n+1)}{11}}
+\]
