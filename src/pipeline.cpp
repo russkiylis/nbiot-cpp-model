@@ -11,6 +11,7 @@
  */
 
 #include <iostream>
+
 #include "sync/NpssGenerator.h"
 
 int main() {
@@ -21,7 +22,6 @@ int main() {
     for (size_t i = 0; i < npss_seq.size(); i++) {
         std::cout << "NPSS[" << i << "] = " << npss_seq[i] << std::endl;
     }
-    
+
     return 0;
 }
-

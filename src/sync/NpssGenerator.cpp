@@ -12,7 +12,6 @@
 NpssGenerator::NpssGenerator() = default;
 NpssGenerator::~NpssGenerator() = default;
 
-
 const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() const {
     // Реализация метода для получения NPSS последовательности
 
@@ -20,6 +19,7 @@ const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() con
     // лямбда выполняется ровно один раз (при первом вызове),
     // результат сохраняется в npss_sequence на всё время жизни программы.
     static const std::array<std::complex<float>, 121> npss_sequence = []() {
+        // Лямбда-функция для генерации NPSS последовательности
 
         // Инициализация нулями {} гарантирует, что все элементы
         // в массиве не будет мусора, а будут комплексные нули (0 + j0)
@@ -27,13 +27,16 @@ const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() con
 
         // Генерация NPSS последовательности по формуле
         // Проходим по каждому OFDM-символу (l) и поднесущей (n)
-        for (int l = 0; l < 11; l++) {
-            for (int n = 0; n < 11; n++) {
-                int index = l * 11 + n;
+        for (int n = 0; n < 11; n++) {
+            for (int l = 0; l < 11; l++) {
+                int index = n * 11 + l;
 
                 // static_cast<float> — явное преобразование из double (M_PI)
                 // во float, чтобы избежать предупреждений компилятора
-                sequence[index] = static_cast<float>(s_[l]) * std::exp(std::complex<float>(0, static_cast<float>(-M_PI) * root_index_ * n * (n + 1) / 11));
+                sequence[index] =
+                    static_cast<float>(s_[l]) *
+                    std::exp(std::complex<float>(
+                        0, static_cast<float>(-M_PI) * root_index_ * n * (n + 1) / 11));
             }
         }
 

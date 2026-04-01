@@ -22,17 +22,29 @@
 
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
-var menudata={children:[
-{text:"Титульная страница",url:"index.html"},
-{text:"Классы",url:"annotated.html",children:[
-{text:"Классы",url:"annotated.html"},
-{text:"Алфавитный указатель классов",url:"classes.html"},
-{text:"Члены классов",url:"functions.html",children:[
-{text:"Указатель",url:"functions.html"},
-{text:"Функции",url:"functions_func.html"},
-{text:"Переменные",url:"functions_vars.html"}]}]},
-{text:"Файлы",url:"files.html",children:[
-{text:"Файлы",url:"files.html"},
-{text:"Список членов всех файлов",url:"globals.html",children:[
-{text:"Указатель",url:"globals.html"},
-{text:"Функции",url:"globals_func.html"}]}]}]}
+var NAVTREE =
+[
+  [ "NBIoT CPP Model", "index.html", [
+    [ "Классы", "annotated.html", [
+      [ "Классы", "annotated.html", "annotated_dup" ],
+      [ "Алфавитный указатель классов", "classes.html", null ],
+      [ "Члены классов", "functions.html", [
+        [ "Указатель", "functions.html", null ],
+        [ "Функции", "functions_func.html", null ],
+        [ "Переменные", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ]
+    ] ]
+  ] ]
+];
+
+var NAVTREEINDEX =
+[
+"_npss_generator_8cpp.html"
+];
+
+var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
+var SYNCOFFMSG = 'нажмите на включить для синхронизации панелей';
+var LISTOFALLMEMBERS = 'Полный список членов класса';

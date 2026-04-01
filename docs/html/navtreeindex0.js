@@ -17,10 +17,7 @@ var NAVTREEINDEX0 =
 "functions.html":[0,2,0],
 "functions_func.html":[0,2,1],
 "functions_vars.html":[0,2,2],
-"globals.html":[1,1,0],
-"globals_func.html":[1,1,1],
 "index.html":[],
 "pages.html":[],
-"pipeline_8cpp.html":[1,0,1,1],
-"pipeline_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,1,1,0]
+"pipeline_8cpp.html":[1,0,1,1]
 };

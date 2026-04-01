@@ -26,4 +26,3 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # Указание места поиска заголовочных файлов
 target_include_directories(${PROJECT_NAME} PRIVATE "include")
 
-
