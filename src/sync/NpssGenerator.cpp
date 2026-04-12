@@ -27,6 +27,7 @@ const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() con
 
         // Генерация NPSS последовательности по формуле
         // Проходим по каждому OFDM-символу (l) и поднесущей (n)
+        constexpr float PI_F = 3.14159265358979323846f;
         for (int n = 0; n < 11; n++) {
             for (int l = 0; l < 11; l++) {
                 int index = n * 11 + l;
@@ -36,7 +37,7 @@ const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() con
                 sequence[index] =
                     static_cast<float>(s_[l]) *
                     std::exp(std::complex<float>(
-                        0, static_cast<float>(-M_PI) * root_index_ * n * (n + 1) / 11));
+                        0, static_cast<float>(-PI_F) * root_index_ * n * (n + 1) / 11));
             }
         }
 
