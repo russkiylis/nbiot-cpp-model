@@ -8,6 +8,10 @@
  * @version 1.0
  */
  // 
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+
 #include <iostream>
 
 #include "sync/NpssGenerator.h"
@@ -15,6 +19,17 @@
 #include "misc/NpssFileReader.h"
 
 int main() {
+    
+#ifdef _WIN32
+    // Включаем поддержку UTF-8 в консоли (только для Windows)
+    SetConsoleOutputCP(65001);
+    
+    // Меняем режим консоли на UTF-8
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleMode(hConsole, ENABLE_PROCESSED_OUTPUT | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+#endif
+
+
     // getNpssSequence() возвращает ссылку на static const массив
     // внутри функции, он живёт до конца программы.
     const auto& npss_seq = NpssGenerator().getNpssSequence();
