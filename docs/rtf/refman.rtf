@@ -182,8 +182,14 @@
 {
 \par
 \pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Correlator} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b NpssFileReader} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAO \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
 {\b {\b NpssGenerator} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'C3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0 NPSS (Narrowband Primary Synchronization Signal) \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\'C3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0 NPSS (Narrowband Primary Synchronization Signal) \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b NsssGenerator} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -197,14 +203,28 @@
 {
 \par
 \pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b include/misc/{\b Correlator.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/misc/{\b NpssFileReader.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EB\'E0\'F1\'F1 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F2\'E5\'EA\'F1\'F2\'EE\'E2\'EE\'E3\'EE \'F4\'E0\'E9\'EB\'E0 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
 {\b include/sync/{\b NpssGenerator.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (header) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (header) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/sync/{\b NsssGenerator.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'C3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (Narrowband Secondary Synchronization Signal) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b src/{\b pipeline.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. \'C4\'E5\'EC\'EE\'ED\'F1\'F2\'F0\'E0\'F6\'E8\'EE\'ED\'ED\'FB\'E9 \'EF\'E0\'E9\'EF\'EB\'E0\'E9\'ED \'E4\'EB\'FF \'F2\'E5\'F1\'F2\'E8\'F0\'EE\'E2\'E0\'ED\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/misc/{\b NpssFileReader.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'EA\'EB\'E0\'F1\'F1\'E0 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F4\'E0\'E9\'EB\'E0 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b src/sync/{\b NpssGenerator.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (source) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (source) })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/sync/{\b NsssGenerator.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -212,11 +232,230 @@
 \'CA\'EB\'E0\'F1\'F1\'FB{\tc \v \'CA\'EB\'E0\'F1\'F1\'FB}
 \par \pard\plain 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'CA\'EB\'E0\'F1\'F1 Correlator\par \pard\plain 
+{\tc\tcl2 \v Correlator}
+{\xe \v Correlator}
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CE\'F2\'EA\'F0\'FB\'F2\'FB\'E5 \'F7\'EB\'E5\'ED\'FB\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::array< std::complex< float >, 241 > {\b cyclic_autocorrelation} (std::array< std::complex< float >, 121 > &sequence){\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\'CE\'E1\'FA\'FF\'E2\'EB\'E5\'ED\'E8\'FF \'E8 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'FF \'F7\'EB\'E5\'ED\'EE\'E2 \'EA\'EB\'E0\'F1\'F1\'EE\'E2 \'ED\'E0\'F5\'EE\'E4\'FF\'F2\'F1\'FF \'E2 \'F4\'E0\'E9\'EB\'E0\'F5:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/misc/Correlator.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/misc/Correlator.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'CA\'EB\'E0\'F1\'F1 NpssFileReader\par \pard\plain 
+{\tc\tcl2 \v NpssFileReader}
+{\xe \v NpssFileReader}
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CE\'F2\'EA\'F0\'FB\'F2\'FB\'E5 \'F7\'EB\'E5\'ED\'FB\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b NpssFileReader} (){\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EE\'ED\'F1\'F2\'F0\'F3\'EA\'F2\'EE\'F0 \'EF\'EE \'F3\'EC\'EE\'EB\'F7\'E0\'ED\'E8\'FE }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b ~NpssFileReader} (){\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'C4\'E5\'F1\'F2\'F0\'F3\'EA\'F2\'EE\'F0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b loadFromFile} (const std::string &filename)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'C7\'E0\'E3\'F0\'F3\'E7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E8\'E7 \'F4\'E0\'E9\'EB\'E0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const std::array< std::complex< float >, 121 > & {\b getSequence} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F1\'F1\'E8\'E2\'E0 121 \'FD\'EB\'E5\'EC\'E5\'ED\'F2\'E0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const std::array< std::array< std::complex< float >, 11 >, 11 > & {\b getMatrix} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F2\'F0\'E8\'F6\'FB 11x11. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b isLoaded} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'F0\'EE\'E2\'E5\'F0\'E8\'F2\'FC, \'F3\'F1\'EF\'E5\'F8\'ED\'EE \'EB\'E8 \'E7\'E0\'E3\'F0\'F3\'E6\'E5\'ED\'FB \'E4\'E0\'ED\'ED\'FB\'E5 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b getLastError} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC \'EF\'EE\'F1\'EB\'E5\'E4\'ED\'FE\'FE \'EE\'F8\'E8\'E1\'EA\'F3 }{
+}\par
+}\par}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CC\'E5\'F2\'EE\'E4\'FB\par
+\pard\plain 
+{\xe \v getLastError\:NpssFileReader}
+{\xe \v NpssFileReader\:getLastError}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string NpssFileReader::getLastError () const}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC \'EF\'EE\'F1\'EB\'E5\'E4\'ED\'FE\'FE \'EE\'F8\'E8\'E1\'EA\'F3 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+\'D1\'F2\'F0\'EE\'EA\'E0 \'F1 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'E5\'EC \'EE\'F8\'E8\'E1\'EA\'E8 \par
+}}}}
+{\xe \v getMatrix\:NpssFileReader}
+{\xe \v NpssFileReader\:getMatrix}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const std::array< std::array< std::complex< float >, 11 >, 11 > & NpssFileReader::getMatrix () const}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F2\'F0\'E8\'F6\'FB 11x11. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+\'CA\'EE\'ED\'F1\'F2\'E0\'ED\'F2\'ED\'E0\'FF \'F1\'F1\'FB\'EB\'EA\'E0 \'ED\'E0 \'E4\'E2\'F3\'EC\'E5\'F0\'ED\'FB\'E9 \'EC\'E0\'F1\'F1\'E8\'E2 \par
+}}}}
+{\xe \v getSequence\:NpssFileReader}
+{\xe \v NpssFileReader\:getSequence}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const std::array< std::complex< float >, 121 > & NpssFileReader::getSequence () const}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F1\'F1\'E8\'E2\'E0 121 \'FD\'EB\'E5\'EC\'E5\'ED\'F2\'E0 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+\'CA\'EE\'ED\'F1\'F2\'E0\'ED\'F2\'ED\'E0\'FF \'F1\'F1\'FB\'EB\'EA\'E0 \'ED\'E0 \'EC\'E0\'F1\'F1\'E8\'E2 \'EA\'EE\'EC\'EF\'EB\'E5\'EA\'F1\'ED\'FB\'F5 \'F7\'E8\'F1\'E5\'EB \par
+}}}}
+{\xe \v isLoaded\:NpssFileReader}
+{\xe \v NpssFileReader\:isLoaded}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool NpssFileReader::isLoaded () const}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'F0\'EE\'E2\'E5\'F0\'E8\'F2\'FC, \'F3\'F1\'EF\'E5\'F8\'ED\'EE \'EB\'E8 \'E7\'E0\'E3\'F0\'F3\'E6\'E5\'ED\'FB \'E4\'E0\'ED\'ED\'FB\'E5 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+true \'E5\'F1\'EB\'E8 \'E4\'E0\'ED\'ED\'FB\'E5 \'E7\'E0\'E3\'F0\'F3\'E6\'E5\'ED\'FB, false \'E5\'F1\'EB\'E8 \'ED\'E5\'F2 \par
+}}}}
+{\xe \v loadFromFile\:NpssFileReader}
+{\xe \v NpssFileReader\:loadFromFile}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool NpssFileReader::loadFromFile (const std::string & filename)}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'C7\'E0\'E3\'F0\'F3\'E7\'E8\'F2\'FC NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC \'E8\'E7 \'F4\'E0\'E9\'EB\'E0 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'F0\'E3\'F3\'EC\'E5\'ED\'F2\'FB\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i filename} \cell }{\'CF\'F3\'F2\'FC \'EA \'F4\'E0\'E9\'EB\'F3 \'F1 \'EA\'EE\'EC\'EF\'EB\'E5\'EA\'F1\'ED\'FB\'EC\'E8 \'F7\'E8\'F1\'EB\'E0\'EC\'E8 \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+true \'E5\'F1\'EB\'E8 \'E7\'E0\'E3\'F0\'F3\'E7\'EA\'E0 \'F3\'F1\'EF\'E5\'F8\'ED\'E0, false \'E2 \'EF\'F0\'EE\'F2\'E8\'E2\'ED\'EE\'EC \'F1\'EB\'F3\'F7\'E0\'E5 \par
+}}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\'CE\'E1\'FA\'FF\'E2\'EB\'E5\'ED\'E8\'FF \'E8 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'FF \'F7\'EB\'E5\'ED\'EE\'E2 \'EA\'EB\'E0\'F1\'F1\'EE\'E2 \'ED\'E0\'F5\'EE\'E4\'FF\'F2\'F1\'FF \'E2 \'F4\'E0\'E9\'EB\'E0\'F5:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/misc/{\b NpssFileReader.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/misc/{\b NpssFileReader.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \'CA\'EB\'E0\'F1\'F1 NpssGenerator\par \pard\plain 
 {\tc\tcl2 \v NpssGenerator}
 {\xe \v NpssGenerator}
-{\bkmkstart AAAAAAAAAF}
-{\bkmkend AAAAAAAAAF}
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -230,8 +469,8 @@
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 
-{\b NpssGenerator} (){\bkmkstart AAAAAAAAAG}
-{\bkmkend AAAAAAAAAG}
+{\b NpssGenerator} (){\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
 \par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -240,8 +479,8 @@
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 
-{\b ~NpssGenerator} (){\bkmkstart AAAAAAAAAH}
-{\bkmkend AAAAAAAAAH}
+{\b ~NpssGenerator} (){\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
 \par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -263,8 +502,8 @@ const std::array< std::complex< float >, 121 > & {\b getNpssSequence} () const\p
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 
-static constexpr int {\b root_index_} = 5{\bkmkstart AAAAAAAAAI}
-{\bkmkend AAAAAAAAAI}
+static constexpr int {\b root_index_} = 5{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
 \par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -273,8 +512,8 @@ static constexpr int {\b root_index_} = 5{\bkmkstart AAAAAAAAAI}
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 
-static constexpr std::array< int, 11 > {\b s_} = \{1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1\}{\bkmkstart AAAAAAAAAJ}
-{\bkmkend AAAAAAAAAJ}
+static constexpr std::array< int, 11 > {\b s_} = \{1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1\}{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
 \par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -310,8 +549,8 @@ static constexpr std::array< int, 11 > {\b s_} = \{1, 1, 1, 1, -1, -1, 1, 1, 1, 
 {\f2 https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2425} \par
 }}}}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-{\bkmkstart AAAAAAAAAK}
-{\bkmkend AAAAAAAAAK}
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 \'CC\'E5\'F2\'EE\'E4\'FB\par
 \pard\plain 
@@ -321,8 +560,8 @@ static constexpr std::array< int, 11 > {\b s_} = \{1, 1, 1, 1, -1, -1, 1, 1, 1, 
 {\b 
 const std::array< std::complex< float >, 121 > & NpssGenerator::getNpssSequence () const}}
 \par
-{\bkmkstart AAAAAAAAAL}
-{\bkmkend AAAAAAAAAL}
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -350,17 +589,271 @@ const std::array< std::complex< float >, 121 > & NpssGenerator::getNpssSequence 
 include/sync/{\b NpssGenerator.h}\par
 \pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 src/sync/{\b NpssGenerator.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'CA\'EB\'E0\'F1\'F1 NsssGenerator\par \pard\plain 
+{\tc\tcl2 \v NsssGenerator}
+{\xe \v NsssGenerator}
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CE\'F2\'EA\'F0\'FB\'F2\'FB\'E5 \'F7\'EB\'E5\'ED\'FB\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b NsssGenerator} (size_t ncell_id, size_t frame_id)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EE\'ED\'F1\'F2\'F0\'F3\'EA\'F2\'EE\'F0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const std::array< std::complex< float >, 132 > & {\b getNsssSequence} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC (132 \'FD\'EB\'E5\'EC\'E5\'ED\'F2\'E0). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const std::array< std::array< std::complex< float >, 11 >, 12 > & {\b getNsssMatrix} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NSSS \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F2\'F0\'E8\'F6\'FB 12x11 (\'E4\'EB\'FF \'F0\'E5\'F1\'F3\'F0\'F1\'ED\'EE\'E9 \'F1\'E5\'F2\'EA\'E8). }{
+}\par
+}\par}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CA\'EE\'ED\'F1\'F2\'F0\'F3\'EA\'F2\'EE\'F0(\'FB)\par
+\pard\plain 
+{\xe \v NsssGenerator\:NsssGenerator}
+{\xe \v NsssGenerator\:NsssGenerator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+NsssGenerator::NsssGenerator (size_t ncell_id, size_t frame_id)}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EE\'ED\'F1\'F2\'F0\'F3\'EA\'F2\'EE\'F0 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'F0\'E3\'F3\'EC\'E5\'ED\'F2\'FB\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i ncell_id} \cell }{ID \'F1\'EE\'F2\'FB (0-503) \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i frame_id} \cell }{\'CD\'EE\'EC\'E5\'F0 \'F4\'F0\'E5\'E9\'EC\'E0 \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CC\'E5\'F2\'EE\'E4\'FB\par
+\pard\plain 
+{\xe \v getNsssMatrix\:NsssGenerator}
+{\xe \v NsssGenerator\:getNsssMatrix}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const std::array< std::array< std::complex< float >, 11 >, 12 > & NsssGenerator::getNsssMatrix () const}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NSSS \'E2 \'E2\'E8\'E4\'E5 \'EC\'E0\'F2\'F0\'E8\'F6\'FB 12x11 (\'E4\'EB\'FF \'F0\'E5\'F1\'F3\'F0\'F1\'ED\'EE\'E9 \'F1\'E5\'F2\'EA\'E8). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+\'CC\'E0\'F1\'F1\'E8\'E2 12x11 \'EA\'EE\'EC\'EF\'EB\'E5\'EA\'F1\'ED\'FB\'F5 \'F7\'E8\'F1\'E5\'EB \par
+}}}}
+{\xe \v getNsssSequence\:NsssGenerator}
+{\xe \v NsssGenerator\:getNsssSequence}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const std::array< std::complex< float >, 132 > & NsssGenerator::getNsssSequence () const}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CF\'EE\'EB\'F3\'F7\'E8\'F2\'FC NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'FC (132 \'FD\'EB\'E5\'EC\'E5\'ED\'F2\'E0). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'EE\'E7\'E2\'F0\'E0\'F9\'E0\'E5\'F2\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+\'CA\'EE\'ED\'F1\'F2\'E0\'ED\'F2\'ED\'E0\'FF \'F1\'F1\'FB\'EB\'EA\'E0 \'ED\'E0 \'EC\'E0\'F1\'F1\'E8\'E2 \'EA\'EE\'EC\'EF\'EB\'E5\'EA\'F1\'ED\'FB\'F5 \'F7\'E8\'F1\'E5\'EB \par
+}}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\'CE\'E1\'FA\'FF\'E2\'EB\'E5\'ED\'E8\'FF \'E8 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'FF \'F7\'EB\'E5\'ED\'EE\'E2 \'EA\'EB\'E0\'F1\'F1\'EE\'E2 \'ED\'E0\'F5\'EE\'E4\'FF\'F2\'F1\'FF \'E2 \'F4\'E0\'E9\'EB\'E0\'F5:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/sync/{\b NsssGenerator.h}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/sync/{\b NsssGenerator.cpp}\par
 }
 \pard\plain \sect\sbkpage
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
 \'D4\'E0\'E9\'EB\'FB{\tc \v \'D4\'E0\'E9\'EB\'FB}
 \par \pard\plain 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Correlator.h\par \pard\plain 
+{\tc\tcl2 \v include/misc/Correlator.h}
+{\xe \v include/misc/Correlator.h}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #pragma once}\par
+2 \par
+3 {\cf21 #include <array>}\par
+4 {\cf21 #include <complex>}\par
+5 \par
+6 {\cf17 class }Correlator \{\par
+7 \par
+8     {\cf17 public}:\par
+9         Correlator();\par
+10         ~Correlator();\par
+11 \par
+12         std::array<std::complex<float>, 241> cyclic_autocorrelation(std::array<std::complex<float>, 121>& sequence);\par
+13 \par
+14 \};\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'D4\'E0\'E9\'EB include/misc/NpssFileReader.h\par \pard\plain 
+{\tc\tcl2 \v include/misc/NpssFileReader.h}
+{\xe \v include/misc/NpssFileReader.h}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EB\'E0\'F1\'F1 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F2\'E5\'EA\'F1\'F2\'EE\'E2\'EE\'E3\'EE \'F4\'E0\'E9\'EB\'E0 }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <array>}\par
+{\f2 #include <complex>}\par
+{\f2 #include <string>}\par
+{\f2 #include <vector>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CA\'EB\'E0\'F1\'F1\'FB\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b NpssFileReader}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CF\'EE\'E4\'F0\'EE\'E1\'ED\'EE\'E5 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'E5\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'CA\'EB\'E0\'F1\'F1 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F2\'E5\'EA\'F1\'F2\'EE\'E2\'EE\'E3\'EE \'F4\'E0\'E9\'EB\'E0 \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'E2\'F2\'EE\'F0\'FB\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+russkiylis, Tobyret101 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C4\'E0\'F2\'E0\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+12.04.2026 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C2\'E5\'F0\'F1\'E8\'FF\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+1.0 \par
+}}}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+NpssFileReader.h\par \pard\plain 
+{\tc\tcl2 \v include/misc/NpssFileReader.h}
+{\xe \v include/misc/NpssFileReader.h}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+\'D1\'EC. \'E4\'EE\'EA\'F3\'EC\'E5\'ED\'F2\'E0\'F6\'E8\'FE.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 \par
+8 \par
+9 {\cf21 #ifndef NPSS_FILE_READER_H}\par
+10 {\cf21 #define NPSS_FILE_READER_H}\par
+11 \par
+12 {\cf21 #include <array>}\par
+13 {\cf21 #include <complex>}\par
+14 {\cf21 #include <string>}\par
+15 {\cf21 #include <vector>}\par
+16 \par
+17 {\cf17 class }NpssFileReader \{\par
+18 {\cf17 public}:\par
+22     NpssFileReader();\par
+23     \par
+27     ~NpssFileReader();\par
+28     \par
+34     {\cf18 bool} loadFromFile({\cf17 const} std::string& filename);\par
+35     \par
+40     {\cf17 const} std::array<std::complex<float>, 121>& getSequence() {\cf17 const};\par
+41     \par
+46     {\cf17 const} std::array<std::array<std::complex<float>, 11>, 11>& getMatrix() {\cf17 const};\par
+47     \par
+52     {\cf18 bool} isLoaded() {\cf17 const};\par
+53     \par
+58     std::string getLastError() {\cf17 const};\par
+59 \par
+60 {\cf17 private}:\par
+61     std::array<std::complex<float>, 121> sequence_;\par
+62     std::array<std::array<std::complex<float>, 11>, 11> matrix_;\par
+63     {\cf18 bool} is_loaded_;\par
+64     std::string last_error_;\par
+65     \par
+71     std::vector<std::complex<float>> parseLine({\cf17 const} std::string& line);\par
+72     \par
+78     {\cf18 bool} vectorToArray({\cf17 const} std::vector<std::complex<float>>& vec);\par
+79     \par
+85     std::complex<float> parseComplex({\cf17 const} std::string& token);\par
+86 \};\par
+87 \par
+88 {\cf21 #endif }{\cf20 // NPSS_FILE_READER_H}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \'D4\'E0\'E9\'EB include/sync/NpssGenerator.h\par \pard\plain 
 {\tc\tcl2 \v include/sync/NpssGenerator.h}
 {\xe \v include/sync/NpssGenerator.h}
-{\bkmkstart AAAAAAAAAB}
-{\bkmkend AAAAAAAAAB}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -409,8 +902,8 @@ MIT License \par
 NpssGenerator.h\par \pard\plain 
 {\tc\tcl2 \v include/sync/NpssGenerator.h}
 {\xe \v include/sync/NpssGenerator.h}
-{\bkmkstart AAAAAAAAAA}
-{\bkmkend AAAAAAAAAA}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
 \'D1\'EC. \'E4\'EE\'EA\'F3\'EC\'E5\'ED\'F2\'E0\'F6\'E8\'FE.\par
 {
 \par
@@ -440,18 +933,148 @@ NpssGenerator.h\par \pard\plain
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-\'D4\'E0\'E9\'EB src/pipeline.cpp\par \pard\plain 
-{\tc\tcl2 \v src/pipeline.cpp}
-{\xe \v src/pipeline.cpp}
-{\bkmkstart AAAAAAAAAC}
-{\bkmkend AAAAAAAAAC}
+\'D4\'E0\'E9\'EB include/sync/NsssGenerator.h\par \pard\plain 
+{\tc\tcl2 \v include/sync/NsssGenerator.h}
+{\xe \v include/sync/NsssGenerator.h}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. }}\par
+\'C3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (Narrowband Secondary Synchronization Signal). }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <array>}\par
+{\f2 #include <complex>}\par
+{\f2 #include <vector>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CA\'EB\'E0\'F1\'F1\'FB\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b NsssGenerator}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CF\'EE\'E4\'F0\'EE\'E1\'ED\'EE\'E5 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'E5\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'C3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 (Narrowband Secondary Synchronization Signal). \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'E2\'F2\'EE\'F0\'FB\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+russkiylis, Tobyret101 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C4\'E0\'F2\'E0\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+19.04.2026 \par
+}}}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+NsssGenerator.h\par \pard\plain 
+{\tc\tcl2 \v include/sync/NsssGenerator.h}
+{\xe \v include/sync/NsssGenerator.h}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+\'D1\'EC. \'E4\'EE\'EA\'F3\'EC\'E5\'ED\'F2\'E0\'F6\'E8\'FE.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 \par
+7 \par
+8 {\cf21 #ifndef NSSS_GENERATOR_H}\par
+9 {\cf21 #define NSSS_GENERATOR_H}\par
+10 \par
+11 {\cf21 #include <array>}\par
+12 {\cf21 #include <complex>}\par
+13 {\cf21 #include <vector>}\par
+14 \par
+15 {\cf17 class }NsssGenerator \{\par
+16 {\cf17 public}:\par
+22     NsssGenerator({\cf18 size_t} ncell_id, {\cf18 size_t} frame_id);\par
+23     \par
+24     ~NsssGenerator();\par
+25     \par
+30     {\cf17 const} std::array<std::complex<float>, 132>& getNsssSequence() {\cf17 const};\par
+31     \par
+36     {\cf17 const} std::array<std::array<std::complex<float>, 11>, 12>& getNsssMatrix() {\cf17 const};\par
+37 \par
+38 {\cf17 private}:\par
+39     {\cf17 mutable} {\cf18 bool} is_initialized_;\par
+40     {\cf17 mutable} std::array<std::complex<float>, 132> sequence_;\par
+41     {\cf17 mutable} std::array<std::array<std::complex<float>, 11>, 12> matrix_;\par
+42     \par
+43     {\cf18 size_t} ncell_id_;\par
+44     {\cf18 size_t} frame_id_;\par
+45     \par
+49     {\cf17 static} {\cf17 const} std::array<std::array<int, 128>, 4> b_table_;\par
+50     \par
+54     {\cf18 void} init() {\cf17 const};\par
+55 \};\par
+56 \par
+57 {\cf21 #endif }{\cf20 // NSSS_GENERATOR_H}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'D4\'E0\'E9\'EB src/misc/NpssFileReader.cpp\par \pard\plain 
+{\tc\tcl2 \v src/misc/NpssFileReader.cpp}
+{\xe \v src/misc/NpssFileReader.cpp}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'EA\'EB\'E0\'F1\'F1\'E0 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F4\'E0\'E9\'EB\'E0 }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "misc/NpssFileReader.h"}\par
+{\f2 #include <fstream>}\par
+{\f2 #include <sstream>}\par
+{\f2 #include <algorithm>}\par
+{\f2 #include <cctype>}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CF\'EE\'E4\'F0\'EE\'E1\'ED\'EE\'E5 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'E5\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'EA\'EB\'E0\'F1\'F1\'E0 \'E4\'EB\'FF \'F7\'F2\'E5\'ED\'E8\'FF NPSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \'E8\'E7 \'F4\'E0\'E9\'EB\'E0 \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'E2\'F2\'EE\'F0\'FB\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+russkiylis, Tobyret101 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C4\'E0\'F2\'E0\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+12.04.2026 \par
+}}}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'D4\'E0\'E9\'EB src/pipeline.cpp\par \pard\plain 
+{\tc\tcl2 \v src/pipeline.cpp}
+{\xe \v src/pipeline.cpp}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. \'C4\'E5\'EC\'EE\'ED\'F1\'F2\'F0\'E0\'F6\'E8\'EE\'ED\'ED\'FB\'E9 \'EF\'E0\'E9\'EF\'EB\'E0\'E9\'ED \'E4\'EB\'FF \'F2\'E5\'F1\'F2\'E8\'F0\'EE\'E2\'E0\'ED\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. }}\par
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <iomanip>}\par
 {\f2 #include "sync/NpssGenerator.h"}\par
+{\f2 #include "sync/NsssGenerator.h"}\par
+{\f2 #include "misc/Correlator.h"}\par
+{\f2 #include "misc/NpssFileReader.h"}\par
 }
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 \'D4\'F3\'ED\'EA\'F6\'E8\'E8\par
@@ -460,8 +1083,8 @@ NpssGenerator.h\par \pard\plain
 {
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 
-int {\b main} (){\bkmkstart AAAAAAAAAD}
-{\bkmkend AAAAAAAAAD}
+int {\b main} (){\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
 \par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -470,9 +1093,9 @@ int {\b main} (){\bkmkstart AAAAAAAAAD}
 \pard\plain 
 {
 \pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. \par
+\'D2\'EE\'F7\'EA\'E0 \'E2\'F5\'EE\'E4\'E0: \'E3\'E5\'ED\'E5\'F0\'E0\'F6\'E8\'FF \'E8 \'E2\'FB\'E2\'EE\'E4 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. \'C4\'E5\'EC\'EE\'ED\'F1\'F2\'F0\'E0\'F6\'E8\'EE\'ED\'ED\'FB\'E9 \'EF\'E0\'E9\'EF\'EB\'E0\'E9\'ED \'E4\'EB\'FF \'F2\'E5\'F1\'F2\'E8\'F0\'EE\'E2\'E0\'ED\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8. \par
 }{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-\'C4\'E5\'EC\'EE\'ED\'F1\'F2\'F0\'E0\'F6\'E8\'EE\'ED\'ED\'FB\'E9 \'EF\'E0\'E9\'EF\'EB\'E0\'E9\'ED \'E4\'EB\'FF \'F2\'E5\'F1\'F2\'E8\'F0\'EE\'E2\'E0\'ED\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NPSS-\'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8.\par
+\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
 \'C0\'E2\'F2\'EE\'F0\'FB\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 russkiylis, Tobyret101 \par
@@ -491,8 +1114,8 @@ russkiylis, Tobyret101 \par
 \'D4\'E0\'E9\'EB src/sync/NpssGenerator.cpp\par \pard\plain 
 {\tc\tcl2 \v src/sync/NpssGenerator.cpp}
 {\xe \v src/sync/NpssGenerator.cpp}
-{\bkmkstart AAAAAAAAAE}
-{\bkmkend AAAAAAAAAE}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -521,6 +1144,41 @@ russkiylis, Tobyret101 \par
 }}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
 \'C0\'E2\'F2\'EE\'F0\'F1\'F2\'E2\'EE\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 MIT License \par
+}}}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'D4\'E0\'E9\'EB src/sync/NsssGenerator.cpp\par \pard\plain 
+{\tc\tcl2 \v src/sync/NsssGenerator.cpp}
+{\xe \v src/sync/NsssGenerator.cpp}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "sync/NsssGenerator.h"}\par
+{\f2 #include <cmath>}\par
+{\f2 #include <algorithm>}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'CF\'EE\'E4\'F0\'EE\'E1\'ED\'EE\'E5 \'EE\'EF\'E8\'F1\'E0\'ED\'E8\'E5\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'E5\'E0\'EB\'E8\'E7\'E0\'F6\'E8\'FF \'E3\'E5\'ED\'E5\'F0\'E0\'F2\'EE\'F0\'E0 NSSS \'EF\'EE\'F1\'EB\'E5\'E4\'EE\'E2\'E0\'F2\'E5\'EB\'FC\'ED\'EE\'F1\'F2\'E8 \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C0\'E2\'F2\'EE\'F0\'FB\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+russkiylis, Tobyret101 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs16\cgrid 
+\'C4\'E0\'F2\'E0\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+19.04.2026 \par
 }}}}
 
 \pard\plain \sect\sbkpage

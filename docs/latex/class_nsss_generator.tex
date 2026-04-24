@@ -1,0 +1,70 @@
+\doxysection{Класс Nsss\+Generator}
+\hypertarget{class_nsss_generator}{}\label{class_nsss_generator}\index{NsssGenerator@{NsssGenerator}}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19}{Nsss\+Generator}} (size\+\_\+t ncell\+\_\+id, size\+\_\+t frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+const std::\+array$<$ std::\+complex$<$ float $>$, 132 $>$ \& \doxymbox{\hyperlink{class_nsss_generator_a1251c9fbd11fe4c973cfff0d0174fb3c}{get\+Nsss\+Sequence}} () const
+\begin{DoxyCompactList}\small\item\em Получить NSSS последовательность (132 элемента). \end{DoxyCompactList}\item 
+const std::\+array$<$ std::\+array$<$ std::\+complex$<$ float $>$, 11 $>$, 12 $>$ \& \doxymbox{\hyperlink{class_nsss_generator_aa1bff2e425e2d35987e6b3d49f0f412b}{get\+Nsss\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Получить NSSS в виде матрицы 12x11 (для ресурсной сетки). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_nsss_generator_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19}\index{NsssGenerator@{NsssGenerator}!NsssGenerator@{NsssGenerator}}
+\index{NsssGenerator@{NsssGenerator}!NsssGenerator@{NsssGenerator}}
+\doxysubsubsection{\texorpdfstring{NsssGenerator()}{NsssGenerator()}}
+{\footnotesize\ttfamily \label{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19} 
+Nsss\+Generator::\+\+Nsss\+Generator (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ncell\+\_\+id}{, }\item[{size\+\_\+t}]{frame\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ncell\+\_\+id} & ID соты (0-\/503) \\
+\hline
+{\em frame\+\_\+id} & Номер фрейма \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_nsss_generator_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_nsss_generator_aa1bff2e425e2d35987e6b3d49f0f412b}\index{NsssGenerator@{NsssGenerator}!getNsssMatrix@{getNsssMatrix}}
+\index{getNsssMatrix@{getNsssMatrix}!NsssGenerator@{NsssGenerator}}
+\doxysubsubsection{\texorpdfstring{getNsssMatrix()}{getNsssMatrix()}}
+{\footnotesize\ttfamily \label{class_nsss_generator_aa1bff2e425e2d35987e6b3d49f0f412b} 
+const std::\+array$<$ std::\+array$<$ std::\+complex$<$ float $>$, 11 $>$, 12 $>$ \& Nsss\+Generator::\+get\+Nsss\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить NSSS в виде матрицы 12x11 (для ресурсной сетки). 
+
+\begin{DoxyReturn}{Возвращает}
+Массив 12x11 комплексных чисел 
+\end{DoxyReturn}
+\Hypertarget{class_nsss_generator_a1251c9fbd11fe4c973cfff0d0174fb3c}\index{NsssGenerator@{NsssGenerator}!getNsssSequence@{getNsssSequence}}
+\index{getNsssSequence@{getNsssSequence}!NsssGenerator@{NsssGenerator}}
+\doxysubsubsection{\texorpdfstring{getNsssSequence()}{getNsssSequence()}}
+{\footnotesize\ttfamily \label{class_nsss_generator_a1251c9fbd11fe4c973cfff0d0174fb3c} 
+const std::\+array$<$ std::\+complex$<$ float $>$, 132 $>$ \& Nsss\+Generator::\+get\+Nsss\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить NSSS последовательность (132 элемента). 
+
+\begin{DoxyReturn}{Возвращает}
+Константная ссылка на массив комплексных чисел 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+include/\+sync/\+\doxymbox{\hyperlink{_nsss_generator_8h}{Nsss\+Generator.\+h}}\item 
+src/\+sync/\+\doxymbox{\hyperlink{_nsss_generator_8cpp}{Nsss\+Generator.\+cpp}}\end{DoxyCompactItemize}

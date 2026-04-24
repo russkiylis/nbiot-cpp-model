@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NBIoT CPP Model: Класс NpssFileReader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NBIoT CPP Model
+   </div>
+   <div id="projectbrief">Реализация downlink-канала NB-IoT на языке C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_npss_file_reader.html','','class_npss_file_reader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс NpssFileReader</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af1994ee093b0af524d274c7ef2d9d092" id="r_af1994ee093b0af524d274c7ef2d9d092"><td class="memItemLeft"><a id="af1994ee093b0af524d274c7ef2d9d092" name="af1994ee093b0af524d274c7ef2d9d092"></a>
+&#160;</td><td class="memItemRight"><b>NpssFileReader</b> ()</td></tr>
+<tr class="memdesc:af1994ee093b0af524d274c7ef2d9d092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию <br /></td></tr>
+<tr class="memitem:a0738247379d1dca3d275ecc0f690c898" id="r_a0738247379d1dca3d275ecc0f690c898"><td class="memItemLeft"><a id="a0738247379d1dca3d275ecc0f690c898" name="a0738247379d1dca3d275ecc0f690c898"></a>
+&#160;</td><td class="memItemRight"><b>~NpssFileReader</b> ()</td></tr>
+<tr class="memdesc:a0738247379d1dca3d275ecc0f690c898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор <br /></td></tr>
+<tr class="memitem:a1353e943afc70ab7da2562e4edddaf4a" id="r_a1353e943afc70ab7da2562e4edddaf4a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1353e943afc70ab7da2562e4edddaf4a">loadFromFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a1353e943afc70ab7da2562e4edddaf4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузить NPSS последовательность из файла  <br /></td></tr>
+<tr class="memitem:a178b1753699976d59986978d9652781f" id="r_a178b1753699976d59986978d9652781f"><td class="memItemLeft">const std::array&lt; std::complex&lt; float &gt;, 121 &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a178b1753699976d59986978d9652781f">getSequence</a> () const</td></tr>
+<tr class="memdesc:a178b1753699976d59986978d9652781f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить NPSS последовательность в виде массива 121 элемента  <br /></td></tr>
+<tr class="memitem:a743e476a0697249fca613e12de3b8e88" id="r_a743e476a0697249fca613e12de3b8e88"><td class="memItemLeft">const std::array&lt; std::array&lt; std::complex&lt; float &gt;, 11 &gt;, 11 &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a743e476a0697249fca613e12de3b8e88">getMatrix</a> () const</td></tr>
+<tr class="memdesc:a743e476a0697249fca613e12de3b8e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить NPSS последовательность в виде матрицы 11x11.  <br /></td></tr>
+<tr class="memitem:a9a6e379c15440f4df4fc95ec81d8a180" id="r_a9a6e379c15440f4df4fc95ec81d8a180"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9a6e379c15440f4df4fc95ec81d8a180">isLoaded</a> () const</td></tr>
+<tr class="memdesc:a9a6e379c15440f4df4fc95ec81d8a180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, успешно ли загружены данные  <br /></td></tr>
+<tr class="memitem:aa50095327b23c8ff957eb3d35f1ba8e5" id="r_aa50095327b23c8ff957eb3d35f1ba8e5"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aa50095327b23c8ff957eb3d35f1ba8e5">getLastError</a> () const</td></tr>
+<tr class="memdesc:aa50095327b23c8ff957eb3d35f1ba8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить последнюю ошибку  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa50095327b23c8ff957eb3d35f1ba8e5" name="aa50095327b23c8ff957eb3d35f1ba8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50095327b23c8ff957eb3d35f1ba8e5">&#9670;&#160;</a></span>getLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string NpssFileReader::getLastError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить последнюю ошибку </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с описанием ошибки </dd></dl>
+
+</div>
+</div>
+<a id="a743e476a0697249fca613e12de3b8e88" name="a743e476a0697249fca613e12de3b8e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743e476a0697249fca613e12de3b8e88">&#9670;&#160;</a></span>getMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt; std::array&lt; std::complex&lt; float &gt;, 11 &gt;, 11 &gt; &amp; NpssFileReader::getMatrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить NPSS последовательность в виде матрицы 11x11. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Константная ссылка на двумерный массив </dd></dl>
+
+</div>
+</div>
+<a id="a178b1753699976d59986978d9652781f" name="a178b1753699976d59986978d9652781f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178b1753699976d59986978d9652781f">&#9670;&#160;</a></span>getSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt; std::complex&lt; float &gt;, 121 &gt; &amp; NpssFileReader::getSequence </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить NPSS последовательность в виде массива 121 элемента </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Константная ссылка на массив комплексных чисел </dd></dl>
+
+</div>
+</div>
+<a id="a9a6e379c15440f4df4fc95ec81d8a180" name="a9a6e379c15440f4df4fc95ec81d8a180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6e379c15440f4df4fc95ec81d8a180">&#9670;&#160;</a></span>isLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NpssFileReader::isLoaded </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверить, успешно ли загружены данные </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true если данные загружены, false если нет </dd></dl>
+
+</div>
+</div>
+<a id="a1353e943afc70ab7da2562e4edddaf4a" name="a1353e943afc70ab7da2562e4edddaf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1353e943afc70ab7da2562e4edddaf4a">&#9670;&#160;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NpssFileReader::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Загрузить NPSS последовательность из файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Путь к файлу с комплексными числами </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если загрузка успешна, false в противном случае </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/misc/<a class="el" href="_npss_file_reader_8h_source.html">NpssFileReader.h</a></li>
+<li>src/misc/<a class="el" href="_npss_file_reader_8cpp.html">NpssFileReader.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_npss_file_reader.html">NpssFileReader</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

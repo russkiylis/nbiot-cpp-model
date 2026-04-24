@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['npssgenerator_0',['NpssGenerator',['../class_npss_generator.html',1,'']]]
+  ['correlator_0',['Correlator',['../class_correlator.html',1,'']]]
 ];

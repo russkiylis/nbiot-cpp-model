@@ -10,6 +10,7 @@
  #include <gtest/gtest.h>
  #include "sync/NpssGenerator.h"
 
+ // Тест для проверки длины сгенерированной NPSS-последовательности
  TEST(test_NpssGenerator, SequenceLengthIs121){
     NpssGenerator generator;
     const auto& sequence = generator.getNpssSequence();
