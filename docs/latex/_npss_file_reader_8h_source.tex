@@ -1,0 +1,46 @@
+\doxysection{Npss\+File\+Reader.\+h}
+\hypertarget{_npss_file_reader_8h_source}{}\label{_npss_file_reader_8h_source}\index{include/misc/NpssFileReader.h@{include/misc/NpssFileReader.h}}
+\doxymbox{\hyperlink{_npss_file_reader_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ NPSS\_FILE\_READER\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ NPSS\_FILE\_READER\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_npss_file_reader_af1994ee093b0af524d274c7ef2d9d092}{NpssFileReader}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_npss_file_reader_af1994ee093b0af524d274c7ef2d9d092}{NpssFileReader}}();}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{class_npss_file_reader_a0738247379d1dca3d275ecc0f690c898}{\string~NpssFileReader}}();}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_npss_file_reader_a1353e943afc70ab7da2562e4edddaf4a}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::array<std::complex<float>,\ 121>\&\ \doxymbox{\hyperlink{class_npss_file_reader_a178b1753699976d59986978d9652781f}{getSequence}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ std::array<std::array<std::complex<float>,\ 11>,\ 11>\&\ \doxymbox{\hyperlink{class_npss_file_reader_a743e476a0697249fca613e12de3b8e88}{getMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_npss_file_reader_a9a6e379c15440f4df4fc95ec81d8a180}{isLoaded}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_npss_file_reader_aa50095327b23c8ff957eb3d35f1ba8e5}{getLastError}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ std::array<std::complex<float>,\ 121>\ sequence\_;}
+\DoxyCodeLine{00062\ \ \ \ \ std::array<std::array<std::complex<float>,\ 11>,\ 11>\ matrix\_;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_loaded\_;}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ last\_error\_;}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ std::vector<std::complex<float>>\ parseLine(\textcolor{keyword}{const}\ std::string\&\ line);}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ vectorToArray(\textcolor{keyword}{const}\ std::vector<std::complex<float>>\&\ vec);}
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ std::complex<float>\ parseComplex(\textcolor{keyword}{const}\ std::string\&\ token);}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NPSS\_FILE\_READER\_H}}
+
+\end{DoxyCode}

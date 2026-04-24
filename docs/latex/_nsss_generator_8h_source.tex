@@ -1,0 +1,39 @@
+\doxysection{Nsss\+Generator.\+h}
+\hypertarget{_nsss_generator_8h_source}{}\label{_nsss_generator_8h_source}\index{include/sync/NsssGenerator.h@{include/sync/NsssGenerator.h}}
+\doxymbox{\hyperlink{_nsss_generator_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ NSSS\_GENERATOR\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ NSSS\_GENERATOR\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19}{NsssGenerator}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19}{NsssGenerator}}(\textcolor{keywordtype}{size\_t}\ ncell\_id,\ \textcolor{keywordtype}{size\_t}\ frame\_id);}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_nsss_generator_a3ea5ea5cd28aaaa1d59d86f45ed8aa19}{\string~NsssGenerator}}();}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ std::array<std::complex<float>,\ 132>\&\ \doxymbox{\hyperlink{class_nsss_generator_a1251c9fbd11fe4c973cfff0d0174fb3c}{getNsssSequence}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ std::array<std::array<std::complex<float>,\ 11>,\ 12>\&\ \doxymbox{\hyperlink{class_nsss_generator_aa1bff2e425e2d35987e6b3d49f0f412b}{getNsssMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{bool}\ is\_initialized\_;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{mutable}\ std::array<std::complex<float>,\ 132>\ sequence\_;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{mutable}\ std::array<std::array<std::complex<float>,\ 11>,\ 12>\ matrix\_;}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ ncell\_id\_;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ frame\_id\_;}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::array<std::array<int,\ 128>,\ 4>\ b\_table\_;}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ init()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NSSS\_GENERATOR\_H}}
+
+\end{DoxyCode}

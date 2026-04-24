@@ -84,7 +84,7 @@ int main() {
             //          << " + " << matrix[0][0].imag() << "i" << std::endl;
             
             for (size_t i = 0; i < nsss_seq.size(); i++) {
-                std::cout << "NSSS[" << i << "] = " << nsss_seq[i] << std::endl;
+                std::cout << "NNCellID[" << ncell_id << "]" << " FrameID[" << frame_id << "]" << " NSSS[" << i << "] = " << nsss_seq[i] << std::endl;
             }
         }
     }

@@ -1,0 +1,102 @@
+\doxysection{Класс Npss\+File\+Reader}
+\hypertarget{class_npss_file_reader}{}\label{class_npss_file_reader}\index{NpssFileReader@{NpssFileReader}}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_npss_file_reader_af1994ee093b0af524d274c7ef2d9d092}\label{class_npss_file_reader_af1994ee093b0af524d274c7ef2d9d092} 
+{\bfseries Npss\+File\+Reader} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+\Hypertarget{class_npss_file_reader_a0738247379d1dca3d275ecc0f690c898}\label{class_npss_file_reader_a0738247379d1dca3d275ecc0f690c898} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Npss\+File\+Reader} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_npss_file_reader_a1353e943afc70ab7da2562e4edddaf4a}{load\+From\+File}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Загрузить NPSS последовательность из файла \end{DoxyCompactList}\item 
+const std::\+array$<$ std::\+complex$<$ float $>$, 121 $>$ \& \doxymbox{\hyperlink{class_npss_file_reader_a178b1753699976d59986978d9652781f}{get\+Sequence}} () const
+\begin{DoxyCompactList}\small\item\em Получить NPSS последовательность в виде массива 121 элемента \end{DoxyCompactList}\item 
+const std::\+array$<$ std::\+array$<$ std::\+complex$<$ float $>$, 11 $>$, 11 $>$ \& \doxymbox{\hyperlink{class_npss_file_reader_a743e476a0697249fca613e12de3b8e88}{get\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Получить NPSS последовательность в виде матрицы 11x11. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_npss_file_reader_a9a6e379c15440f4df4fc95ec81d8a180}{is\+Loaded}} () const
+\begin{DoxyCompactList}\small\item\em Проверить, успешно ли загружены данные \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_npss_file_reader_aa50095327b23c8ff957eb3d35f1ba8e5}{get\+Last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Получить последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_npss_file_reader_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_npss_file_reader_aa50095327b23c8ff957eb3d35f1ba8e5}\index{NpssFileReader@{NpssFileReader}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!NpssFileReader@{NpssFileReader}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_npss_file_reader_aa50095327b23c8ff957eb3d35f1ba8e5} 
+std::\+string Npss\+File\+Reader::\+get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить последнюю ошибку 
+
+\begin{DoxyReturn}{Возвращает}
+Строка с описанием ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_npss_file_reader_a743e476a0697249fca613e12de3b8e88}\index{NpssFileReader@{NpssFileReader}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!NpssFileReader@{NpssFileReader}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}}
+{\footnotesize\ttfamily \label{class_npss_file_reader_a743e476a0697249fca613e12de3b8e88} 
+const std::\+array$<$ std::\+array$<$ std::\+complex$<$ float $>$, 11 $>$, 11 $>$ \& Npss\+File\+Reader::\+get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить NPSS последовательность в виде матрицы 11x11. 
+
+\begin{DoxyReturn}{Возвращает}
+Константная ссылка на двумерный массив 
+\end{DoxyReturn}
+\Hypertarget{class_npss_file_reader_a178b1753699976d59986978d9652781f}\index{NpssFileReader@{NpssFileReader}!getSequence@{getSequence}}
+\index{getSequence@{getSequence}!NpssFileReader@{NpssFileReader}}
+\doxysubsubsection{\texorpdfstring{getSequence()}{getSequence()}}
+{\footnotesize\ttfamily \label{class_npss_file_reader_a178b1753699976d59986978d9652781f} 
+const std::\+array$<$ std::\+complex$<$ float $>$, 121 $>$ \& Npss\+File\+Reader::\+get\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить NPSS последовательность в виде массива 121 элемента 
+
+\begin{DoxyReturn}{Возвращает}
+Константная ссылка на массив комплексных чисел 
+\end{DoxyReturn}
+\Hypertarget{class_npss_file_reader_a9a6e379c15440f4df4fc95ec81d8a180}\index{NpssFileReader@{NpssFileReader}!isLoaded@{isLoaded}}
+\index{isLoaded@{isLoaded}!NpssFileReader@{NpssFileReader}}
+\doxysubsubsection{\texorpdfstring{isLoaded()}{isLoaded()}}
+{\footnotesize\ttfamily \label{class_npss_file_reader_a9a6e379c15440f4df4fc95ec81d8a180} 
+bool Npss\+File\+Reader::\+is\+Loaded (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверить, успешно ли загружены данные 
+
+\begin{DoxyReturn}{Возвращает}
+true если данные загружены, false если нет 
+\end{DoxyReturn}
+\Hypertarget{class_npss_file_reader_a1353e943afc70ab7da2562e4edddaf4a}\index{NpssFileReader@{NpssFileReader}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!NpssFileReader@{NpssFileReader}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_npss_file_reader_a1353e943afc70ab7da2562e4edddaf4a} 
+bool Npss\+File\+Reader::\+load\+From\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Загрузить NPSS последовательность из файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Путь к файлу с комплексными числами \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если загрузка успешна, false в противном случае 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+include/\+misc/\+\doxymbox{\hyperlink{_npss_file_reader_8h}{Npss\+File\+Reader.\+h}}\item 
+src/\+misc/\+\doxymbox{\hyperlink{_npss_file_reader_8cpp}{Npss\+File\+Reader.\+cpp}}\end{DoxyCompactItemize}
