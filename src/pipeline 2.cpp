@@ -13,10 +13,8 @@
 #endif
 
 #include <iostream>
-#include <iomanip>
 
 #include "sync/NpssGenerator.h"
-#include "sync/NsssGenerator.h"
 #include "misc/Correlator.h"
 #include "misc/NpssFileReader.h"
 
@@ -48,8 +46,6 @@ int main() {
         std::cout << "Corr[" << i << "] = " << npss_correlation[i] << std::endl;
     }
 
-
-
     NpssFileReader reader;
     
     if (reader.loadFromFile(INPUT_DIR "matrix_d_output.txt")) {
@@ -67,25 +63,6 @@ int main() {
         std::cerr << "Ошибка загрузки: " << reader.getLastError() << std::endl;
         return 1;
     }
-
-
-
-    // Константы для генерации NSSS
-    int ncell_id = 300; // от 0 до 503
-    int frame_id = 0; // от 0 до 7, дальше повторяется сначала
-    
-    NsssGenerator nsss_gen(ncell_id, frame_id);
-    
-    const auto& nsss_seq = nsss_gen.getNsssSequence();
-    //const auto& matrix = nsss_gen.getNsssMatrix();
-    //std::cout << "\nNSSS Matrix 12x11:" << std::endl;
-    //std::cout << "matrix[0][0] = " << matrix[0][0].real() 
-    //          << " + " << matrix[0][0].imag() << "i" << std::endl;
-    
-    for (size_t i = 0; i < nsss_seq.size(); i++) {
-        std::cout << "NSSS[" << i << "] = " << nsss_seq[i] << std::endl;
-    }
-
 
     return 0;
 }
