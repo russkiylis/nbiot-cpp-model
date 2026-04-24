@@ -71,21 +71,21 @@ int main() {
 
 
     // Константы для генерации NSSS
-    int ncell_id = 300; // от 0 до 503
-    int frame_id = 0; // от 0 до 7, дальше повторяется сначала
+    for (size_t ncell_id = 0; ncell_id <= 503; ncell_id++) {
+        for (size_t frame_id = 0; frame_id <= 7; frame_id++) {
+            NsssGenerator nsss_gen(ncell_id, frame_id);
     
-    NsssGenerator nsss_gen(ncell_id, frame_id);
-    
-    const auto& nsss_seq = nsss_gen.getNsssSequence();
-    //const auto& matrix = nsss_gen.getNsssMatrix();
-    //std::cout << "\nNSSS Matrix 12x11:" << std::endl;
-    //std::cout << "matrix[0][0] = " << matrix[0][0].real() 
-    //          << " + " << matrix[0][0].imag() << "i" << std::endl;
-    
-    for (size_t i = 0; i < nsss_seq.size(); i++) {
-        std::cout << "NSSS[" << i << "] = " << nsss_seq[i] << std::endl;
+            const auto& nsss_seq = nsss_gen.getNsssSequence();
+            //const auto& matrix = nsss_gen.getNsssMatrix();
+            //std::cout << "\nNSSS Matrix 12x11:" << std::endl;
+            //std::cout << "matrix[0][0] = " << matrix[0][0].real() 
+            //          << " + " << matrix[0][0].imag() << "i" << std::endl;
+            
+            for (size_t i = 0; i < nsss_seq.size(); i++) {
+                std::cout << "NSSS[" << i << "] = " << nsss_seq[i] << std::endl;
+            }
+        }
     }
-
 
     return 0;
 }
