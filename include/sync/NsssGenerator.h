@@ -19,7 +19,7 @@ public:
      * @param ncell_id ID соты (0-503)
      * @param frame_id Номер фрейма
      */
-    NsssGenerator(int ncell_id, int frame_id);
+    NsssGenerator(size_t ncell_id, size_t frame_id);
     
     ~NsssGenerator();
     
@@ -40,8 +40,8 @@ private:
     mutable std::array<std::complex<float>, 132> sequence_;
     mutable std::array<std::array<std::complex<float>, 11>, 12> matrix_;
     
-    int ncell_id_;
-    int frame_id_;
+    size_t ncell_id_;
+    size_t frame_id_;
     
     /**
      * @brief Таблица b (128 элементов) для NSSS

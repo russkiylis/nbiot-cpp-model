@@ -36,7 +36,7 @@ const std::array<std::array<int, 128>, 4> NsssGenerator::b_table_ = {{
      1, -1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1}
 }};
 
-NsssGenerator::NsssGenerator(int ncell_id, int frame_id)
+NsssGenerator::NsssGenerator(size_t ncell_id, size_t frame_id)
     : is_initialized_(false)
     , ncell_id_(ncell_id)
     , frame_id_(frame_id)
@@ -68,8 +68,8 @@ void NsssGenerator::init() const {
     static constexpr float PI_F = 3.14159265358979323846f;
     
     // Параметры из MATLAB кода
-    int u = (ncell_id_ % 126) + 3;           // u = mod(NCellID, 126) + 3
-    int q = ncell_id_ / 126;                 // q = floor(NCellID / 126)
+    size_t u = (ncell_id_ % 126) + 3;           // u = mod(NCellID, 126) + 3
+    size_t q = ncell_id_ / 126;                 // q = floor(NCellID / 126)
     
     // q должно быть в диапазоне 0-3
     if (q < 0) q = 0;
