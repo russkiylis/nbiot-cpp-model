@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <chrono>
 
 #include "sync/NpssGenerator.h"
 #include "sync/NsssGenerator.h"
@@ -21,6 +22,7 @@
 #include "misc/NpssFileReader.h"
 
 int main() {
+    auto start = std::chrono::high_resolution_clock::now();
     
 #ifdef _WIN32
     // Включаем поддержку UTF-8 в консоли (только для Windows)
@@ -70,7 +72,7 @@ int main() {
 
 
 
-    // Константы для генерации NSSS
+    // Константы для генерации NSSS for (size_t frame_id = 0; frame_id <= 7; frame_id += 2)
     for (size_t ncell_id = 0; ncell_id <= 503; ncell_id++) {
         for (size_t frame_id = 0; frame_id <= 7; frame_id++) {
             NsssGenerator nsss_gen(ncell_id, frame_id);
@@ -86,6 +88,10 @@ int main() {
             }
         }
     }
-
+    auto end = std::chrono::high_resolution_clock::now();
+        // Или в секундах (с долями)
+    std::chrono::duration<double> sec = end - start;
+    std::cout << "Время выполнения: " << sec.count() << " с" << std::endl;
     return 0;
 }
+

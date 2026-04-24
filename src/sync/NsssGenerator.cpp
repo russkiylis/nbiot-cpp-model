@@ -10,7 +10,7 @@
 #include <algorithm>
 
 // Статическая таблица b (из MATLAB кода)
-const std::array<std::array<int, 128>, 4> NsssGenerator::b_table_ = {{
+constexpr std::array<std::array<int, 128>, 4> NsssGenerator::b_table_ = {{
     // b(1,:) - все единицы
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
      1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
