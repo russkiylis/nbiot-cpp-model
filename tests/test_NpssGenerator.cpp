@@ -9,12 +9,13 @@
 
  #include <gtest/gtest.h>
  #include "sync/NpssGenerator.h"
- #include "misc/ComplexSequenceReader.h"
+ //#include "misc/ComplexSequenceReader.h"
+ #include "misc/NpssFileReader.h"
 
  // Тест для проверки длины сгенерированной NPSS-последовательности
  TEST(test_NpssGenerator, NpssTester){
     NpssGenerator generator;
-    ComplexSequenceReader reader;
+    NpssFileReader reader;
     const double tolerance = 1e-4;  // точность
 
     ASSERT_TRUE(reader.loadFromFile(INPUT_DIR "matrix_d_output.txt"));

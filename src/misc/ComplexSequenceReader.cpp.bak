@@ -1,8 +1,9 @@
-#include "ComplexSequenceReader.h"
+
 #include <fstream>
 #include <sstream>
 #include <cctype>
 #include <algorithm>
+#include "ComplexSequenceReader.h"
 
 ComplexSequenceReader::ComplexSequenceReader() 
     : is_loaded_(false) {}
