@@ -19,7 +19,7 @@
 #include "sync/NpssGenerator.h"
 #include "sync/NsssGenerator.h"
 #include "misc/Correlator.h"
-#include "misc/NpssFileReader.h"
+//#include "misc/NpssFileReader.h"
 
 int main() {
     auto start = std::chrono::high_resolution_clock::now();
@@ -51,9 +51,8 @@ int main() {
     }
 
 
-
+    /*
     NpssFileReader reader;
-    
     if (reader.loadFromFile(INPUT_DIR "matrix_d_output.txt")) {
         std::cout << "NPSS последовательность успешно загружена!" << std::endl;
 
@@ -69,7 +68,7 @@ int main() {
         std::cerr << "Ошибка загрузки: " << reader.getLastError() << std::endl;
         return 1;
     }
-
+    */
 
 
     // Константы для генерации NSSS
@@ -92,6 +91,7 @@ int main() {
         // Или в секундах (с долями)
     std::chrono::duration<double> sec = end - start;
     std::cout << "Время выполнения: " << sec.count() << " с" << std::endl;
+
     return 0;
 }
 

@@ -1,0 +1,111 @@
+#include "ComplexSequenceReader.h"
+#include <fstream>
+#include <sstream>
+#include <cctype>
+#include <algorithm>
+
+ComplexSequenceReader::ComplexSequenceReader() 
+    : is_loaded_(false) {}
+
+ComplexSequenceReader::~ComplexSequenceReader() = default;
+
+static const size_t RESERVE_SIZE = 1000000;
+
+bool ComplexSequenceReader::loadFromFile(const std::string& filename) {
+    // Очищаем предыдущие данные
+    sequence_.clear();
+    is_loaded_ = false;
+    last_error_.clear();
+    
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        last_error_ = "Не удалось открыть файл: " + filename;
+        return false;
+    }
+    
+    // Резервируем память для больших файлов (опционально)
+    sequence_.reserve(RESERVE_SIZE);
+    
+    std::string line;
+    while (std::getline(file, line)) {
+        // Пропускаем пустые строки
+        if (line.empty() || line.find_first_not_of(" \t") == std::string::npos) {
+            continue;
+        }
+        
+        parseLine(line);
+    }
+    
+    file.close();
+    
+    if (sequence_.empty()) {
+        last_error_ = "Файл не содержит данных: " + filename;
+        return false;
+    }
+    
+    is_loaded_ = true;
+    return true;
+}
+
+void ComplexSequenceReader::parseLine(const std::string& line) {
+    std::stringstream ss(line);
+    std::string token;
+    
+    while (ss >> token) {
+        // Убираем пробелы по краям
+        token.erase(0, token.find_first_not_of(" \t"));
+        token.erase(token.find_last_not_of(" \t") + 1);
+        
+        if (token.empty()) continue;
+        
+        sequence_.push_back(parseComplex(token));
+    }
+}
+
+std::complex<float> ComplexSequenceReader::parseComplex(const std::string& token) {
+    std::string temp = token;
+    
+    // Удаляем 'i' в конце если есть
+    if (!temp.empty() && temp.back() == 'i') {
+        temp.pop_back();
+    }
+    
+    // Ищем позицию разделителя между real и imag
+    size_t pos = temp.find('+');
+    if (pos == std::string::npos) {
+        // Ищем минус, начиная с позиции 1 (чтобы не захватить минус в real части)
+        pos = temp.find('-', 1);
+    }
+    
+    if (pos != std::string::npos) {
+        float real = std::stof(temp.substr(0, pos));
+        float imag = std::stof(temp.substr(pos));
+        return std::complex<float>(real, imag);
+    }
+    
+    // Если разделитель не найден — только действительное число
+    float real = std::stof(temp);
+    return std::complex<float>(real, 0.0f);
+}
+
+const std::vector<std::complex<float>>& ComplexSequenceReader::getSequence() const {
+    return sequence_;
+}
+
+size_t ComplexSequenceReader::size() const {
+    return sequence_.size();
+}
+
+bool ComplexSequenceReader::isLoaded() const {
+    return is_loaded_;
+}
+
+std::string ComplexSequenceReader::getLastError() const {
+    return last_error_;
+}
+
+void ComplexSequenceReader::clear() {
+    sequence_.clear();
+    is_loaded_ = false;
+    last_error_.clear();
+}
