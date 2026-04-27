@@ -72,9 +72,9 @@ int main() {
 
 
 
-    // Константы для генерации NSSS for (size_t frame_id = 0; frame_id <= 7; frame_id += 2)
+    // Константы для генерации NSSS
     for (size_t ncell_id = 0; ncell_id <= 503; ncell_id++) {
-        for (size_t frame_id = 0; frame_id <= 7; frame_id++) {
+        for (size_t frame_id = 0; frame_id <= 7; frame_id += 2) {
             NsssGenerator nsss_gen(ncell_id, frame_id);
     
             const auto& nsss_seq = nsss_gen.getNsssSequence();
