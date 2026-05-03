@@ -3,7 +3,7 @@
 #include <sstream>
 #include <cctype>
 #include <algorithm>
-#include "ComplexSequenceReader.h"
+#include "misc/ComplexSequenceReader.h"
 
 ComplexSequenceReader::ComplexSequenceReader() 
     : is_loaded_(false) {}
