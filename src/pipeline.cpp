@@ -68,9 +68,7 @@ int main() {
         std::cerr << "Ошибка загрузки: " << reader.getLastError() << std::endl;
         return 1;
     }
-    */
-
-
+    
     // Константы для генерации NSSS
     for (size_t ncell_id = 0; ncell_id <= 503; ncell_id++) {
         for (size_t frame_id = 0; frame_id <= 7; frame_id += 2) {
@@ -87,6 +85,7 @@ int main() {
             }
         }
     }
+    */
     auto end = std::chrono::high_resolution_clock::now();
         // Или в секундах (с долями)
     std::chrono::duration<double> sec = end - start;
