@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FFT/FFT.vcxproj" Id="de28f86d-0227-4010-9ed8-1ba81dc81a0f" />
+</Solution>

@@ -1,0 +1,2157 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "EntryPointMinGW32::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EntryPointMinGW32-Debug-5fb43987c97b675ded19.json",
+					"name" : "EntryPointMinGW32",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_tooling-Debug-366a17966b46ad1de438.json",
+					"name" : "FFT_tooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Concurrent::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Concurrent-Debug-c8462522f400d4d5dae4.json",
+					"name" : "Qt6::Concurrent",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Core-Debug-81ad742ffdfbf0fc6b3b.json",
+					"name" : "Qt6::Core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::EntryPointImplementation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__EntryPointImplementation-Debug-e75b7f92ab6e149b001a.json",
+					"name" : "Qt6::EntryPointImplementation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::EntryPointPrivate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__EntryPointPrivate-Debug-9b9c832f1cb3c096ec6f.json",
+					"name" : "Qt6::EntryPointPrivate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::GlobalConfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__GlobalConfig-Debug-f39c4a5940af8d22834a.json",
+					"name" : "Qt6::GlobalConfig",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::GlobalConfigPrivate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__GlobalConfigPrivate-Debug-2b1a95cff2eaa9374bbf.json",
+					"name" : "Qt6::GlobalConfigPrivate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Graphs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Graphs-Debug-a5726a80b9e10dfc629b.json",
+					"name" : "Qt6::Graphs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Graphsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Graphsplugin-Debug-8fcae7b026cbe5925103.json",
+					"name" : "Qt6::Graphsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Gui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Gui-Debug-db10cf68aecdf88981a0.json",
+					"name" : "Qt6::Gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::LabsPlatformplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__LabsPlatformplugin-Debug-328b6937eb6777791852.json",
+					"name" : "Qt6::LabsPlatformplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::LabsStyleKitImplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__LabsStyleKitImplplugin-Debug-b4050e96e5e54abbeb7d.json",
+					"name" : "Qt6::LabsStyleKitImplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::LabsStyleKitplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__LabsStyleKitplugin-Debug-7de15ede8fd8445ec235.json",
+					"name" : "Qt6::LabsStyleKitplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::LabsSynchronizerplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__LabsSynchronizerplugin-Debug-a5815d6a1c9b5d248339.json",
+					"name" : "Qt6::LabsSynchronizerplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Network::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Network-Debug-d24cc0d74c15c2727901.json",
+					"name" : "Qt6::Network",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::OpenGL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__OpenGL-Debug-c78f74c69facff8b81c5.json",
+					"name" : "Qt6::OpenGL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Platform::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Platform-Debug-a0b0f28adfdbe9f293fb.json",
+					"name" : "Qt6::Platform",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformAppInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformAppInternal-Debug-c16d1143e615735ca0f4.json",
+					"name" : "Qt6::PlatformAppInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformCommonInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformCommonInternal-Debug-48f55932c1c800b1aef6.json",
+					"name" : "Qt6::PlatformCommonInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformExampleInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformExampleInternal-Debug-87d0781824009d3bf368.json",
+					"name" : "Qt6::PlatformExampleInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformModuleInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformModuleInternal-Debug-9ea003cb5990be4c06e8.json",
+					"name" : "Qt6::PlatformModuleInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformPluginInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformPluginInternal-Debug-e9bbadcbe8fbefa20b53.json",
+					"name" : "Qt6::PlatformPluginInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::PlatformToolInternal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__PlatformToolInternal-Debug-2d207526efb200d83495.json",
+					"name" : "Qt6::PlatformToolInternal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QDebugMessageServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QDebugMessageServiceFactoryPlugin-Debug-30bfefe24999519fb1af.json",
+					"name" : "Qt6::QDebugMessageServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QGifPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QGifPlugin-Debug-7a8c82e51b0e0cbbad02.json",
+					"name" : "Qt6::QGifPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QICOPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QICOPlugin-Debug-3ff1c6900cd62dca8d27.json",
+					"name" : "Qt6::QICOPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QJpegPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QJpegPlugin-Debug-6aef87b2d9374fadef8d.json",
+					"name" : "Qt6::QJpegPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QLocalClientConnectionFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QLocalClientConnectionFactoryPlugin-Debug-62ddd6bf2bfe05d2ff29.json",
+					"name" : "Qt6::QLocalClientConnectionFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QMinimalIntegrationPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QMinimalIntegrationPlugin-Debug-9bff5cf487939f35d421.json",
+					"name" : "Qt6::QMinimalIntegrationPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QNLMNIPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QNLMNIPlugin-Debug-fe25bcf91c0cc1530d6e.json",
+					"name" : "Qt6::QNLMNIPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QOffscreenIntegrationPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QOffscreenIntegrationPlugin-Debug-5e494758847592109e24.json",
+					"name" : "Qt6::QOffscreenIntegrationPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlDebugServerFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlDebugServerFactoryPlugin-Debug-da8f8193a216952e296d.json",
+					"name" : "Qt6::QQmlDebugServerFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlDebuggerServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlDebuggerServiceFactoryPlugin-Debug-2b158a5504f22effa62c.json",
+					"name" : "Qt6::QQmlDebuggerServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlInspectorServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlInspectorServiceFactoryPlugin-Debug-feb1d1aa442614d7e23b.json",
+					"name" : "Qt6::QQmlInspectorServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlNativeDebugConnectorFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlNativeDebugConnectorFactoryPlugin-Debug-a5c7c2f1903459dde028.json",
+					"name" : "Qt6::QQmlNativeDebugConnectorFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlNativeDebugServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlNativeDebugServiceFactoryPlugin-Debug-9d86c8bfb5ea9825ba8e.json",
+					"name" : "Qt6::QQmlNativeDebugServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlPreviewServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlPreviewServiceFactoryPlugin-Debug-c1459349362541933f39.json",
+					"name" : "Qt6::QQmlPreviewServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQmlProfilerServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQmlProfilerServiceFactoryPlugin-Debug-b71e63cc31d5e0b309e5.json",
+					"name" : "Qt6::QQmlProfilerServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQuick3DProfilerAdapterFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQuick3DProfilerAdapterFactoryPlugin-Debug-72ab34936b42a8c3be60.json",
+					"name" : "Qt6::QQuick3DProfilerAdapterFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQuickEventReplayServiceFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQuickEventReplayServiceFactoryPlugin-Debug-86231059b1e507d87707.json",
+					"name" : "Qt6::QQuickEventReplayServiceFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QQuickProfilerAdapterFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QQuickProfilerAdapterFactoryPlugin-Debug-067edc9256a9507a0e99.json",
+					"name" : "Qt6::QQuickProfilerAdapterFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QSchannelBackendPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QSchannelBackendPlugin-Debug-fce19449783f96f9633c.json",
+					"name" : "Qt6::QSchannelBackendPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QSvgIconPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QSvgIconPlugin-Debug-3029a94e7a71063a0689.json",
+					"name" : "Qt6::QSvgIconPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QSvgPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QSvgPlugin-Debug-4a692ff500e85fd27b8e.json",
+					"name" : "Qt6::QSvgPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QTcpServerConnectionFactoryPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QTcpServerConnectionFactoryPlugin-Debug-d00feb100c44b61de8a3.json",
+					"name" : "Qt6::QTcpServerConnectionFactoryPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QTlsBackendCertOnlyPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QTlsBackendCertOnlyPlugin-Debug-d20e3d82dea8a1ddfb79.json",
+					"name" : "Qt6::QTlsBackendCertOnlyPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QTlsBackendOpenSSLPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QTlsBackendOpenSSLPlugin-Debug-3256e110698f2ad253ad.json",
+					"name" : "Qt6::QTlsBackendOpenSSLPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QTuioTouchPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QTuioTouchPlugin-Debug-678126b741685b0121eb.json",
+					"name" : "Qt6::QTuioTouchPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QWindowsDirect2DIntegrationPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QWindowsDirect2DIntegrationPlugin-Debug-e7565c0959ccff39e5d7.json",
+					"name" : "Qt6::QWindowsDirect2DIntegrationPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QWindowsIntegrationPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QWindowsIntegrationPlugin-Debug-7d312476aa8e1713f60d.json",
+					"name" : "Qt6::QWindowsIntegrationPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Qml-Debug-7e0ef5f797f6116b966f.json",
+					"name" : "Qt6::Qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlAssetDownloaderPrivate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlAssetDownloaderPrivate-Debug-e314fdf3aa306a89fdb0.json",
+					"name" : "Qt6::QmlAssetDownloaderPrivate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlAssetDownloaderPrivate_resources_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlAssetDownloaderPrivate_resources_1-Debug-1bf00ae4b1b83cc04a20.json",
+					"name" : "Qt6::QmlAssetDownloaderPrivate_resources_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlAssetDownloaderPrivateplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlAssetDownloaderPrivateplugin-Debug-de140df644832c4bca5a.json",
+					"name" : "Qt6::QmlAssetDownloaderPrivateplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlAssetDownloaderPrivateplugin_init::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlAssetDownloaderPrivateplugin_init-Debug-6f3a9ffe2625e05289a8.json",
+					"name" : "Qt6::QmlAssetDownloaderPrivateplugin_init",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlIntegration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlIntegration-Debug-adac6b3c6912b9ffcbc1.json",
+					"name" : "Qt6::QmlIntegration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlMeta::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlMeta-Debug-3ccbc12df161c0a93d86.json",
+					"name" : "Qt6::QmlMeta",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlModels::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlModels-Debug-213fb0453196b9c4f0d0.json",
+					"name" : "Qt6::QmlModels",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlNetworkplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlNetworkplugin-Debug-6b1f5f4f7aac94c4c83b.json",
+					"name" : "Qt6::QmlNetworkplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QmlWorkerScript::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QmlWorkerScript-Debug-5dfa4fe6bb5fa733dfde.json",
+					"name" : "Qt6::QmlWorkerScript",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Quick::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Quick-Debug-b9060abfcac2dde981d1.json",
+					"name" : "Qt6::Quick",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Quick3D::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Quick3D-Debug-0a434d409708cb334af9.json",
+					"name" : "Qt6::Quick3D",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Quick3DRuntimeRender::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Quick3DRuntimeRender-Debug-7bfea216153ed1dca69a.json",
+					"name" : "Qt6::Quick3DRuntimeRender",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Quick3DUtils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Quick3DUtils-Debug-0759bf991f7d9a40b5f0.json",
+					"name" : "Qt6::Quick3DUtils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::Quick3DXrplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__Quick3DXrplugin-Debug-c46ff03b8355c195a96d.json",
+					"name" : "Qt6::Quick3DXrplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QuickControls2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QuickControls2-Debug-d8ea3420955f3df3d3cf.json",
+					"name" : "Qt6::QuickControls2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QuickControlsTestUtilsPrivateplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QuickControlsTestUtilsPrivateplugin-Debug-8bd02d0ca32502fe8153.json",
+					"name" : "Qt6::QuickControlsTestUtilsPrivateplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QuickShapes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QuickShapes-Debug-e1fd775661718586d5fd.json",
+					"name" : "Qt6::QuickShapes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QuickTemplates2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QuickTemplates2-Debug-8b03ff06145afa22d6a2.json",
+					"name" : "Qt6::QuickTemplates2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::QuickTestplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__QuickTestplugin-Debug-bb081cec502c2072b735.json",
+					"name" : "Qt6::QuickTestplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::ShaderTools::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__ShaderTools-Debug-604c10a42d8f0db86575.json",
+					"name" : "Qt6::ShaderTools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::TaskTree::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__TaskTree-Debug-f5244eb473afa4298183.json",
+					"name" : "Qt6::TaskTree",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::androiddeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__androiddeployqt-Debug-70a8185ef588756a86dd.json",
+					"name" : "Qt6::androiddeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::androidtestrunner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__androidtestrunner-Debug-f7f9434b3f39b9b28a73.json",
+					"name" : "Qt6::androidtestrunner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::balsam::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__balsam-Debug-ac6ae0a1234afe1c5473.json",
+					"name" : "Qt6::balsam",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::balsamui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__balsamui-Debug-b9e756a5462c399c8131.json",
+					"name" : "Qt6::balsamui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::cmake_automoc_parser::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__cmake_automoc_parser-Debug-cb3dc2585c6093fd4192.json",
+					"name" : "Qt6::cmake_automoc_parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::effectsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__effectsplugin-Debug-8b7bb0e00f5988ea3edb.json",
+					"name" : "Qt6::effectsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::instancer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__instancer-Debug-ae00f4a0bf7240ffbd8a.json",
+					"name" : "Qt6::instancer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::labsanimationplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__labsanimationplugin-Debug-b62621898bd594a0eedb.json",
+					"name" : "Qt6::labsanimationplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::labsmodelsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__labsmodelsplugin-Debug-12bf59d0119affe2dfd2.json",
+					"name" : "Qt6::labsmodelsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::lightmapviewer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__lightmapviewer-Debug-12545f93170d4d08869d.json",
+					"name" : "Qt6::lightmapviewer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::materialeditor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__materialeditor-Debug-653a06d68e57804d64dd.json",
+					"name" : "Qt6::materialeditor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::meshdebug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__meshdebug-Debug-4127f07bfdc68e723549.json",
+					"name" : "Qt6::meshdebug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::moc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__moc-Debug-385d3d5bd521e1ba6889.json",
+					"name" : "Qt6::moc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::modelsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__modelsplugin-Debug-ab4233bc25ad5477afbf.json",
+					"name" : "Qt6::modelsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::particleshadergen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__particleshadergen-Debug-e6efa0c1fe1bd53ec804.json",
+					"name" : "Qt6::particleshadergen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::particlesplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__particlesplugin-Debug-5f611e24b88aabc4a892.json",
+					"name" : "Qt6::particlesplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qlalr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qlalr-Debug-c4788150ad3cd5936dea.json",
+					"name" : "Qt6::qlalr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmake-Debug-012c5b8320ec5f82deac.json",
+					"name" : "Qt6::qmake",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlaotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlaotstats-Debug-d20802297b3f8d16741e.json",
+					"name" : "Qt6::qmlaotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlcachegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlcachegen-Debug-3fa2eb59a9113b44659a.json",
+					"name" : "Qt6::qmlcachegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlcontextpropertydump::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlcontextpropertydump-Debug-d9e92ad196dfec99a94d.json",
+					"name" : "Qt6::qmlcontextpropertydump",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmldom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmldom-Debug-1dd2d141ca7e1c5b3afd.json",
+					"name" : "Qt6::qmldom",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlfolderlistmodelplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlfolderlistmodelplugin-Debug-3ed3977e8f6f50d4d919.json",
+					"name" : "Qt6::qmlfolderlistmodelplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlformat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlformat-Debug-7fa3d039b6ca5de22afe.json",
+					"name" : "Qt6::qmlformat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlimportscanner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlimportscanner-Debug-91c8a53476cbddd9ceab.json",
+					"name" : "Qt6::qmlimportscanner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmljsrootgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmljsrootgen-Debug-ed917268099a0abbf377.json",
+					"name" : "Qt6::qmljsrootgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmllint-Debug-29d5eb660c61433e4445.json",
+					"name" : "Qt6::qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmllocalstorageplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmllocalstorageplugin-Debug-2405320b81cfdee93435.json",
+					"name" : "Qt6::qmllocalstorageplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlplugin-Debug-12e30e1a4db59f0b4512.json",
+					"name" : "Qt6::qmlplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlplugindump::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlplugindump-Debug-a6c862a9fb6586b7a58d.json",
+					"name" : "Qt6::qmlplugindump",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlprofiler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlprofiler-Debug-48519218449c6aecb11e.json",
+					"name" : "Qt6::qmlprofiler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlsettingsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlsettingsplugin-Debug-1a95bd0e065cbb64cdf8.json",
+					"name" : "Qt6::qmlsettingsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlshapesplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlshapesplugin-Debug-a4bb1a03b13f95ae6755.json",
+					"name" : "Qt6::qmlshapesplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmltc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmltc-Debug-d42471c725c03c03d8c1.json",
+					"name" : "Qt6::qmltc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmltestrunner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmltestrunner-Debug-6b0b859ecfa484134ec9.json",
+					"name" : "Qt6::qmltestrunner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmltime::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmltime-Debug-8775c6aad8c42225f07f.json",
+					"name" : "Qt6::qmltime",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmltyperegistrar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmltyperegistrar-Debug-1c461afc7081a9fc8c9e.json",
+					"name" : "Qt6::qmltyperegistrar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlwavefrontmeshplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlwavefrontmeshplugin-Debug-23cf913518069819c111.json",
+					"name" : "Qt6::qmlwavefrontmeshplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qmlxmllistmodelplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qmlxmllistmodelplugin-Debug-d1f478d4c80fa04b0df3.json",
+					"name" : "Qt6::qmlxmllistmodelplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qquick3dplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qquick3dplugin-Debug-6d4b5f78b9d2245197bb.json",
+					"name" : "Qt6::qquick3dplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qquicklayoutsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qquicklayoutsplugin-Debug-d1c259d5b46e56b5d180.json",
+					"name" : "Qt6::qquicklayoutsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qquickvectorimagehelpersplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qquickvectorimagehelpersplugin-Debug-530d54b012d5e57c5130.json",
+					"name" : "Qt6::qquickvectorimagehelpersplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qquickvectorimageplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qquickvectorimageplugin-Debug-8905279d4ba11f8bd69a.json",
+					"name" : "Qt6::qquickvectorimageplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qsb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qsb-Debug-04ec7ce5f44a6b993930.json",
+					"name" : "Qt6::qsb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtchartsqml2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtchartsqml2-Debug-f87944de72ff9758f7ae.json",
+					"name" : "Qt6::qtchartsqml2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtpaths::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtpaths-Debug-1f2655930b77e1afdb09.json",
+					"name" : "Qt6::qtpaths",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtqmlcoreplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtqmlcoreplugin-Debug-2dd2936e07b33cf13079.json",
+					"name" : "Qt6::qtqmlcoreplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick2plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick2plugin-Debug-13e9c5c54791bc7f4c3d.json",
+					"name" : "Qt6::qtquick2plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3dassetutilsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3dassetutilsplugin-Debug-9198a15eb72e80cc7554.json",
+					"name" : "Qt6::qtquick3dassetutilsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3deffectplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3deffectplugin-Debug-394fa853bb5a4bbb7d16.json",
+					"name" : "Qt6::qtquick3deffectplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3dhelpersimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3dhelpersimplplugin-Debug-f2196f042e766b3e908f.json",
+					"name" : "Qt6::qtquick3dhelpersimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3dhelpersplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3dhelpersplugin-Debug-8c22098c4e068c5c9169.json",
+					"name" : "Qt6::qtquick3dhelpersplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3dparticleeffectsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3dparticleeffectsplugin-Debug-38bb1cea4058df110b7d.json",
+					"name" : "Qt6::qtquick3dparticleeffectsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquick3dparticles3dplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquick3dparticles3dplugin-Debug-1a06d8911d4684ebc256.json",
+					"name" : "Qt6::qtquick3dparticles3dplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2basicstyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2basicstyleimplplugin-Debug-6b7ec86fcac5a4e3aed0.json",
+					"name" : "Qt6::qtquickcontrols2basicstyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2basicstyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2basicstyleplugin-Debug-3b74bcccd2a4e3d114a2.json",
+					"name" : "Qt6::qtquickcontrols2basicstyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2fluentwinui3styleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2fluentwinui3styleimplplugin-Debug-2edd58681ca3932beb34.json",
+					"name" : "Qt6::qtquickcontrols2fluentwinui3styleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2fluentwinui3styleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2fluentwinui3styleplugin-Debug-0593798eab0142c8b7b5.json",
+					"name" : "Qt6::qtquickcontrols2fluentwinui3styleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2fusionstyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2fusionstyleimplplugin-Debug-15a3b3d72f8645c6b4bd.json",
+					"name" : "Qt6::qtquickcontrols2fusionstyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2fusionstyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2fusionstyleplugin-Debug-dbd9899d4a30f0821e9e.json",
+					"name" : "Qt6::qtquickcontrols2fusionstyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2imaginestyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2imaginestyleimplplugin-Debug-9ea35d998ae29fb69e70.json",
+					"name" : "Qt6::qtquickcontrols2imaginestyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2imaginestyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2imaginestyleplugin-Debug-295945be2c39d433d15a.json",
+					"name" : "Qt6::qtquickcontrols2imaginestyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2implplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2implplugin-Debug-f54bf437b55f981b1763.json",
+					"name" : "Qt6::qtquickcontrols2implplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2materialstyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2materialstyleimplplugin-Debug-df56eb9a566f52429d0a.json",
+					"name" : "Qt6::qtquickcontrols2materialstyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2materialstyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2materialstyleplugin-Debug-774be2d9ae9c1a502d82.json",
+					"name" : "Qt6::qtquickcontrols2materialstyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2nativestyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2nativestyleplugin-Debug-9293b0ec2a59a5730cf2.json",
+					"name" : "Qt6::qtquickcontrols2nativestyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2plugin-Debug-d35a67e579a02c2dba8e.json",
+					"name" : "Qt6::qtquickcontrols2plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2universalstyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2universalstyleimplplugin-Debug-5beec0aaf47f181d2b45.json",
+					"name" : "Qt6::qtquickcontrols2universalstyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2universalstyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2universalstyleplugin-Debug-aa34520cafa7144eb5a9.json",
+					"name" : "Qt6::qtquickcontrols2universalstyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2windowsstyleimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2windowsstyleimplplugin-Debug-10f3bdecdc6e7005dae5.json",
+					"name" : "Qt6::qtquickcontrols2windowsstyleimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickcontrols2windowsstyleplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickcontrols2windowsstyleplugin-Debug-4a61fa465e5fe872e19e.json",
+					"name" : "Qt6::qtquickcontrols2windowsstyleplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickdialogs2quickimplplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickdialogs2quickimplplugin-Debug-7d84a98dbf9f21fcde35.json",
+					"name" : "Qt6::qtquickdialogs2quickimplplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickdialogsplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickdialogsplugin-Debug-1d33353d28d114451ad0.json",
+					"name" : "Qt6::qtquickdialogsplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquickshapesdesignhelpersplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquickshapesdesignhelpersplugin-Debug-7f4d3895eaae638b9fc6.json",
+					"name" : "Qt6::qtquickshapesdesignhelpersplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquicktemplates2plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquicktemplates2plugin-Debug-1b236aadef7c2166f357.json",
+					"name" : "Qt6::qtquicktemplates2plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquicktimelineblendtreesplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquicktimelineblendtreesplugin-Debug-411bee3de4cb6db5403a.json",
+					"name" : "Qt6::qtquicktimelineblendtreesplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qtquicktimelineplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qtquicktimelineplugin-Debug-e744ec07f79ecea669ee.json",
+					"name" : "Qt6::qtquicktimelineplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::quick3dspatialaudio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__quick3dspatialaudio-Debug-c572715edc4fcd302bb7.json",
+					"name" : "Qt6::quick3dspatialaudio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::quickmultimedia::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__quickmultimedia-Debug-b91e5bd55e664df5fab7.json",
+					"name" : "Qt6::quickmultimedia",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::quicktooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__quicktooling-Debug-7600fd7d58838c6b7645.json",
+					"name" : "Qt6::quicktooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::quickwindow::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__quickwindow-Debug-82de8d84879137179c95.json",
+					"name" : "Qt6::quickwindow",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::qvkgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__qvkgen-Debug-5c8d4f28cbbc269ccbfe.json",
+					"name" : "Qt6::qvkgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::rcc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__rcc-Debug-cf7b8b1d951882befb45.json",
+					"name" : "Qt6::rcc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::shadergen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__shadergen-Debug-3bd2dc9971e5c79e5e9a.json",
+					"name" : "Qt6::shadergen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::shapegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__shapegen-Debug-40345cdb29ae60bdbbf7.json",
+					"name" : "Qt6::shapegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::sharedimageplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__sharedimageplugin-Debug-6f5ffb288d672612a61a.json",
+					"name" : "Qt6::sharedimageplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::svgtoqml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__svgtoqml-Debug-bb97b87a43f55b710843.json",
+					"name" : "Qt6::svgtoqml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::syncqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__syncqt-Debug-3e4cd9eaa7870348d6d8.json",
+					"name" : "Qt6::syncqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::tracegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__tracegen-Debug-36f3a182d3c016f10913.json",
+					"name" : "Qt6::tracegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::tracepointgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__tracepointgen-Debug-f7663cfddfee5dfaed77.json",
+					"name" : "Qt6::tracepointgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::wasmdeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__wasmdeployqt-Debug-7b212f298cfa3154e2d3.json",
+					"name" : "Qt6::wasmdeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::windeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__windeployqt-Debug-9d0408c0dff38b2a0448.json",
+					"name" : "Qt6::windeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt6::workerscriptplugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt6__workerscriptplugin-Debug-f7e9d175b7dbdbdfb993.json",
+					"name" : "Qt6::workerscriptplugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::androiddeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__androiddeployqt-Debug-fff650e63fee3a14491e.json",
+					"name" : "Qt::androiddeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::androidtestrunner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__androidtestrunner-Debug-5579bea908138b629bbb.json",
+					"name" : "Qt::androidtestrunner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::balsam::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__balsam-Debug-956b105fedafdf8488fc.json",
+					"name" : "Qt::balsam",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::balsamui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__balsamui-Debug-1fd364a88960ffe62f2d.json",
+					"name" : "Qt::balsamui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::cmake_automoc_parser::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__cmake_automoc_parser-Debug-460bb22ce868fca9223c.json",
+					"name" : "Qt::cmake_automoc_parser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::instancer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__instancer-Debug-c699051649a7f1d14f8f.json",
+					"name" : "Qt::instancer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::lightmapviewer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__lightmapviewer-Debug-3ecac2171f16f9e78848.json",
+					"name" : "Qt::lightmapviewer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::materialeditor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__materialeditor-Debug-f346195b2d2157035e76.json",
+					"name" : "Qt::materialeditor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::meshdebug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__meshdebug-Debug-131c0bfe33c090467b96.json",
+					"name" : "Qt::meshdebug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::moc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__moc-Debug-c16cf20c62ed98dcfe2e.json",
+					"name" : "Qt::moc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::particleshadergen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__particleshadergen-Debug-2b4553f5b34ff49f952c.json",
+					"name" : "Qt::particleshadergen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qlalr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qlalr-Debug-89cf80fb8d4ae4631907.json",
+					"name" : "Qt::qlalr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmake::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmake-Debug-0dfbdcbb3c5f5bf608e3.json",
+					"name" : "Qt::qmake",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlaotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlaotstats-Debug-90fa57f95f6e2211f4d7.json",
+					"name" : "Qt::qmlaotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlcachegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlcachegen-Debug-4d36bf1f407cc228d070.json",
+					"name" : "Qt::qmlcachegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlcontextpropertydump::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlcontextpropertydump-Debug-fa606cbd3fbaecffd843.json",
+					"name" : "Qt::qmlcontextpropertydump",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmldom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmldom-Debug-49149da7a5675c058101.json",
+					"name" : "Qt::qmldom",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlformat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlformat-Debug-4fc868922664a4200b09.json",
+					"name" : "Qt::qmlformat",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlimportscanner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlimportscanner-Debug-c9015d9476edaeec1117.json",
+					"name" : "Qt::qmlimportscanner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmljsrootgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmljsrootgen-Debug-29f65784e8c1ba07383e.json",
+					"name" : "Qt::qmljsrootgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmllint-Debug-7ef807f816f76b52ed0c.json",
+					"name" : "Qt::qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlplugindump::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlplugindump-Debug-296ee717c9dd78bd83a4.json",
+					"name" : "Qt::qmlplugindump",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmlprofiler::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmlprofiler-Debug-fd1e44724b6f2b1bdedc.json",
+					"name" : "Qt::qmlprofiler",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmltc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmltc-Debug-2bc1345ccd5fe6fb7d5a.json",
+					"name" : "Qt::qmltc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmltestrunner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmltestrunner-Debug-b889d6fc7002446761f9.json",
+					"name" : "Qt::qmltestrunner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmltime::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmltime-Debug-0609e7a44ee1c8a3b63b.json",
+					"name" : "Qt::qmltime",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qmltyperegistrar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qmltyperegistrar-Debug-dfca05eef195aec73452.json",
+					"name" : "Qt::qmltyperegistrar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qsb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qsb-Debug-7bcd60e37acac2819e39.json",
+					"name" : "Qt::qsb",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qtpaths::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qtpaths-Debug-240ebe4b4550b67c18ef.json",
+					"name" : "Qt::qtpaths",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::qvkgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__qvkgen-Debug-a452f6d34cf486d1b1ec.json",
+					"name" : "Qt::qvkgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::rcc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__rcc-Debug-fa4d4c12cff788dae3ec.json",
+					"name" : "Qt::rcc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::shadergen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__shadergen-Debug-0c0ad6d9784fb76cbc9f.json",
+					"name" : "Qt::shadergen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::shapegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__shapegen-Debug-d0b1bad125b6ac0f7153.json",
+					"name" : "Qt::shapegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::svgtoqml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__svgtoqml-Debug-019693b4b325b4b84719.json",
+					"name" : "Qt::svgtoqml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::syncqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__syncqt-Debug-5b9c2971ee73d252eb9b.json",
+					"name" : "Qt::syncqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::tracegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__tracegen-Debug-7a4b5ee386d404ef480f.json",
+					"name" : "Qt::tracegen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::tracepointgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__tracepointgen-Debug-839766f671f9edb6ecd7.json",
+					"name" : "Qt::tracepointgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::wasmdeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__wasmdeployqt-Debug-d75098485da021494e28.json",
+					"name" : "Qt::wasmdeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt::windeployqt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt__windeployqt-Debug-398b60d5c07b41c18ea1.json",
+					"name" : "Qt::windeployqt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-Debug-39ef4cb3f5d9fee31ae7.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Vulkan::Headers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Vulkan__Headers-Debug-4269d247cd1a543f8dfa.json",
+					"name" : "Vulkan::Headers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Vulkan::Vulkan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Vulkan__Vulkan-Debug-4cf3a53964f31606adb7.json",
+					"name" : "Vulkan::Vulkan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WrapAtomic::WrapAtomic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WrapAtomic__WrapAtomic-Debug-46bc2c2901d871f4a090.json",
+					"name" : "WrapAtomic::WrapAtomic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WrapVulkanHeaders::WrapVulkanHeaders::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WrapVulkanHeaders__WrapVulkanHeaders-Debug-1be710cc16566f6086b6.json",
+					"name" : "WrapVulkanHeaders::WrapVulkanHeaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_private_link_library_targets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_private_link_library_targets-Debug-64367f56a0b31f4414ac.json",
+					"name" : "qt_private_link_library_targets",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						142,
+						143,
+						144,
+						145,
+						146,
+						147,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						155,
+						156,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						170,
+						171,
+						172,
+						173,
+						174,
+						175,
+						176,
+						177,
+						178,
+						179,
+						180,
+						181,
+						182,
+						183,
+						184,
+						185,
+						186,
+						187,
+						188,
+						189,
+						190,
+						191,
+						192,
+						193,
+						194,
+						195,
+						196,
+						197,
+						198,
+						199,
+						200,
+						201,
+						202,
+						203,
+						204,
+						205,
+						206,
+						207,
+						208,
+						209,
+						210
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f040eec181a89de70dbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59,
+						60,
+						61,
+						62,
+						63,
+						64,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						87,
+						88,
+						89,
+						90,
+						91,
+						92,
+						93,
+						94,
+						95,
+						96,
+						97,
+						98,
+						99,
+						100,
+						101,
+						102,
+						103,
+						104,
+						105,
+						106,
+						107,
+						108,
+						109,
+						110,
+						111,
+						112,
+						113,
+						114,
+						115,
+						116,
+						117,
+						118,
+						119,
+						120,
+						121,
+						122,
+						123,
+						124,
+						125,
+						126,
+						127,
+						128,
+						129,
+						130,
+						131,
+						132,
+						133,
+						134,
+						135,
+						136,
+						137,
+						138,
+						139,
+						140,
+						141,
+						142,
+						143,
+						144,
+						145,
+						146,
+						147,
+						148,
+						149,
+						150,
+						151,
+						152,
+						153,
+						154,
+						155,
+						156,
+						157,
+						158,
+						159,
+						160,
+						161,
+						162,
+						163,
+						164,
+						165,
+						166,
+						167,
+						168,
+						169,
+						170,
+						171,
+						172,
+						173,
+						174,
+						175,
+						176,
+						177,
+						178,
+						179,
+						180,
+						181,
+						182,
+						183,
+						184,
+						185,
+						186,
+						187,
+						188,
+						189,
+						190,
+						191,
+						192,
+						193,
+						194,
+						195,
+						196,
+						197,
+						198,
+						199,
+						200,
+						201,
+						202,
+						203,
+						204,
+						205,
+						206,
+						207,
+						208,
+						209,
+						210
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FFT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT-Debug-08d590cca2b69ea0ac03.json",
+					"name" : "FFT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_autogen-Debug-1fa2298d01e04032cbe2.json",
+					"name" : "FFT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_autogen_timestamp_deps-Debug-dd8b7408fa3440c71248.json",
+					"name" : "FFT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_copy_qml-Debug-56981736a5d0ba96a50b.json",
+					"name" : "FFT_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_copy_res-Debug-af554a5e186263f3e708.json",
+					"name" : "FFT_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_qmlimportscan-Debug-5d8b82ba25b399233d56.json",
+					"name" : "FFT_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_qmllint-Debug-199fb26a8c75647c078b.json",
+					"name" : "FFT_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_qmllint_json-Debug-28359ca561fc7ad071a7.json",
+					"name" : "FFT_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_qmllint_module-Debug-5e5468f26a963d18ea98.json",
+					"name" : "FFT_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FFT_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FFT_qmltyperegistration-Debug-bbcca251e93e2dfe1713.json",
+					"name" : "FFT_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OfdmDebug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OfdmDebug-Debug-9071418c17d218b82dc7.json",
+					"name" : "OfdmDebug",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OfdmDebug_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OfdmDebug_autogen-Debug-792d0b06355da179098c.json",
+					"name" : "OfdmDebug_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OfdmDebug_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OfdmDebug_autogen_timestamp_deps-Debug-77dba2ced4784bf03a16.json",
+					"name" : "OfdmDebug_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-b29d2ddfbdabec2f57c0.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-a35b8eeedfe0bb2ea470.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-9714feba557686e4fef5.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-92bc7d56313afc84eebb.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-4eafeb347c76e64cb17d.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "clean_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-clean_qml_context_properties-Debug-273dac5bd878c57c9fba.json",
+					"name" : "clean_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dump_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dump_qml_context_properties-Debug-ee786f411dda3e62e16e.json",
+					"name" : "dump_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-2a0748112c9839d957bf.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_FFT_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_FFT_aotstats_target-Debug-4d2a6a6186059a09cffc.json",
+					"name" : "module_FFT_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/royal/source/repos/FFT/FFT/build",
+		"source" : "C:/Users/royal/source/repos/FFT/FFT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

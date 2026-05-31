@@ -1,0 +1,274 @@
+{
+    "classes": [
+        {
+            "className": "GraphDataProvider",
+            "lineNumber": 9,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "isConst": true,
+                    "lineNumber": 40,
+                    "name": "inputSignalPoints",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "isConst": true,
+                    "lineNumber": 41,
+                    "name": "reconstructedSignalPoints",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "isConst": true,
+                    "lineNumber": 42,
+                    "name": "dftSpectrumPoints",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "isConst": true,
+                    "lineNumber": 43,
+                    "name": "fftSpectrumPoints",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "channel",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 4,
+                    "isConst": true,
+                    "lineNumber": 44,
+                    "name": "bitsPoints",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "channel",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 5,
+                    "isConst": true,
+                    "lineNumber": 45,
+                    "name": "bpskPoints",
+                    "returnType": "QVariantList"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 11,
+                    "name": "sampleCount",
+                    "override": false,
+                    "read": "sampleCount",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 12,
+                    "name": "channelCount",
+                    "override": false,
+                    "read": "channelCount",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "lineNumber": 13,
+                    "name": "signalMin",
+                    "override": false,
+                    "read": "signalMin",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "lineNumber": 14,
+                    "name": "signalMax",
+                    "override": false,
+                    "read": "signalMax",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "lineNumber": 15,
+                    "name": "spectrumMax",
+                    "override": false,
+                    "read": "spectrumMax",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "lineNumber": 16,
+                    "name": "bitsMin",
+                    "override": false,
+                    "read": "bitsMin",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "lineNumber": 17,
+                    "name": "bitsMax",
+                    "override": false,
+                    "read": "bitsMax",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 7,
+                    "lineNumber": 18,
+                    "name": "bpskMin",
+                    "override": false,
+                    "read": "bpskMin",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 8,
+                    "lineNumber": 19,
+                    "name": "bpskMax",
+                    "override": false,
+                    "read": "bpskMax",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "qreal",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 9,
+                    "lineNumber": 20,
+                    "name": "dftOperations",
+                    "override": false,
+                    "read": "dftOperations",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "long",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 10,
+                    "lineNumber": 21,
+                    "name": "fftOperations",
+                    "override": false,
+                    "read": "fftOperations",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "long",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 11,
+                    "lineNumber": 22,
+                    "name": "ifftOperations",
+                    "override": false,
+                    "read": "ifftOperations",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "long",
+                    "user": false,
+                    "virtual": false
+                }
+            ],
+            "qualifiedClassName": "GraphDataProvider",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "GraphDataProvider.h",
+    "outputRevision": 69
+}

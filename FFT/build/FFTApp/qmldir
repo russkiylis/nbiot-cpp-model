@@ -1,0 +1,6 @@
+module FFTApp
+typeinfo FFT.qmltypes
+prefer :/qt/qml/FFTApp/
+Main 1.0 src/ui/qml/Main.qml
+depends QtQuick
+
