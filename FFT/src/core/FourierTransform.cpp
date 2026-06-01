@@ -51,6 +51,9 @@ std::vector<Complex> FourierTransform::FFT(const std::vector<Complex>& input) {
     std::vector<Complex> output = PadZeros(input);
     int n = static_cast<int>(output.size());
 
+    // Алгоритм Кули-Тьюки (итеративный Decimation-In-Time).
+    // Шаг 1: перестановка элементов в битово-обратном порядке (bit-reversal permutation).
+    // Это эквивалентно рекурсивному разбиению чётных/нечётных индексов.
     for (int i = 1, j = 0; i < n; ++i) {
         int bit = n >> 1;
         for (; j & bit; bit >>= 1) {
@@ -63,16 +66,20 @@ std::vector<Complex> FourierTransform::FFT(const std::vector<Complex>& input) {
         }
     }
 
+    // Шаг 2: последовательное объединение «бабочек» (butterfly).
+    // На каждом уровне len удваивается: обрабатываем пары, четвёрки, восьмёрки и т.д.
+    // wn — поворачивающий множитель (twiddle factor) для текущего уровня.
     for (int len = 2; len <= n; len <<= 1) {
         double ang = 2.0 * PI / len;
-        Complex wn(cos(ang), -sin(ang));
+        Complex wn(cos(ang), -sin(ang)); // минус в экспоненте — прямое ДПФ
 
         for (int i = 0; i < n; i += len) {
-            Complex w(1);
+            Complex w(1); // текущая степень wn
             for (int j = 0; j < len / 2; j++) {
                 Complex u = output[i + j];
                 Complex v = output[i + j + len / 2] * w;
-                output[i + j] = u + v;
+                // butterfly: верхняя ветвь u+v, нижняя u-v
+                output[i + j]           = u + v;
                 output[i + j + len / 2] = u - v;
                 w = w * wn;
                 opsCount++;
@@ -84,9 +91,13 @@ std::vector<Complex> FourierTransform::FFT(const std::vector<Complex>& input) {
 }
 
 std::vector<Complex> FourierTransform::IFFT(const std::vector<Complex>& input) {
+    // Обратное БПФ: то же самое, что прямое, но:
+    //   1) поворачивающий множитель wn имеет плюс в экспоненте (сопряжённый)
+    //   2) результат делится на n
     std::vector<Complex> output = PadZeros(input);
     int n = output.size();
 
+    // Bit-reversal permutation — аналогично прямому БПФ
     for (int i = 1, j = 0; i < n; ++i) {
         int bit = n >> 1;
         for (; j & bit; bit >>= 1) {
@@ -99,16 +110,17 @@ std::vector<Complex> FourierTransform::IFFT(const std::vector<Complex>& input) {
         }
     }
 
+    // Butterfly-стадии с сопряжённым twiddle factor (+sin вместо -sin)
     for (int len = 2; len <= n; len *= 2) {
         double ang = 2.0 * PI / len;
-        Complex wn(cos(ang), sin(ang));
+        Complex wn(cos(ang), sin(ang)); // плюс — обратное ДПФ
 
         for (int i = 0; i < n; i += len) {
             Complex w(1);
             for (int j = 0; j < len / 2; j++) {
                 Complex u = output[i + j];
                 Complex v = output[i + j + len / 2] * w;
-                output[i + j] = u + v;
+                output[i + j]           = u + v;
                 output[i + j + len / 2] = u - v;
                 w = w * wn;
                 opsCount++;
@@ -116,6 +128,7 @@ std::vector<Complex> FourierTransform::IFFT(const std::vector<Complex>& input) {
         }
     }
 
+    // Нормировка на длину — обязательна для корректного обратного преобразования
     for (auto& value : output) {
         value = Complex(value.re / n, value.im / n);
     }

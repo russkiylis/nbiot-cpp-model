@@ -10,9 +10,9 @@ namespace {
 constexpr int kChannelCount = 4;
 }
 
-std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits) {
+std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationType type) {
     const auto channels = SplitChannels(bits);
-    const auto bpskChannels = Modulation::BpskChannels(channels);
+    const auto bpskChannels = Modulation::ModulateChannels(channels, type);
 
     if (bpskChannels.empty()) {
         return {};
@@ -84,6 +84,8 @@ std::vector<Complex> AverageSpectrum(const std::vector<std::vector<Complex>>& sp
         maxSize = std::max(maxSize, spectrum.size());
     }
 
+    // Усредняем амплитуды по всем мгновенным спектрам.
+    // Результат хранится в поле re как вещественное число (im остаётся 0).
     std::vector<Complex> average(maxSize, Complex(0.0, 0.0));
     std::vector<int> counts(maxSize, 0);
 

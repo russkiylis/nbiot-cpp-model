@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "ComplexNumber.h"
+#include "Modulation.h"
 
 class GraphDataProvider : public QObject {
     Q_OBJECT
