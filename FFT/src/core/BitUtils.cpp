@@ -24,12 +24,10 @@ std::vector<int> GenerateBitSequence(long length, std::uint32_t seed) {
     return bits;
 }
 
-std::vector<std::vector<int>> SplitChannels(const std::vector<int>& bits) {
-
-    std::vector<std::vector<int>> channels(4);
-    for (long i = 0; i < bits.size(); ++i) {
-        channels[i % 4].push_back(bits[i]);
+std::vector<std::vector<int>> SplitChannels(const std::vector<int>& bits, int channelCount) {
+    std::vector<std::vector<int>> channels(channelCount);
+    for (size_t i = 0; i < bits.size(); ++i) {
+        channels[i % channelCount].push_back(bits[i]);
     }
-
     return channels;
 }

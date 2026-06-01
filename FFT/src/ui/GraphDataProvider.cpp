@@ -10,15 +10,17 @@
 #include <algorithm>
 
 namespace {
-constexpr int kBitCount = 512;  // длина сигнала: 512 бит → 512 отсчётов IFFT при BPSK
-constexpr int kWindowSize = 64; // 64-точечное БПФ → 64 частотных бина, 4 канала видны отчётливо
-constexpr int kStepSize = 16;   // шаг между окнами
+constexpr int kBitCount = 512;        // общее число бит
+constexpr int kFftSize = 32;          // размер ОБПФ/БПФ одного OFDM-символа
+constexpr int kWindowSize = 32; // окно приёмника = длине символа
+constexpr int kStepSize = 35;   // шаг = длине символа: каждое окно — отдельный OFDM-символ
+constexpr int kSubcarrierCount = 8;  // число активных поднесущих (1..20)
 constexpr ModulationType kModulationType = ModulationType::Bpsk; // Bpsk | Qpsk | Psk16
 }
 
 GraphDataProvider::GraphDataProvider(QObject* parent)
     : QObject(parent),
-      m_ofdmSignal(BuildOfdmSignal(GenerateBitSequence(kBitCount), kModulationType)) {
+      m_ofdmSignal(BuildOfdmSignal(GenerateBitSequence(kBitCount), kModulationType, kSubcarrierCount, kFftSize)) {
     m_spectra = InstantSpectra(m_ofdmSignal, kWindowSize, kStepSize);
     m_averageSpectrum = AverageSpectrum(m_spectra);
 

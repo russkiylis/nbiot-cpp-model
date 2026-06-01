@@ -6,42 +6,43 @@
 
 #include <algorithm>
 
-namespace {
-constexpr int kChannelCount = 4;
-}
+std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationType type, int subcarrierCount, int fftSize) {
+    // Разбиваем биты по числу поднесущих и модулируем каждый канал
+    const auto channels = SplitChannels(bits, subcarrierCount);
+    const auto modulated = Modulation::ModulateChannels(channels, type);
 
-std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationType type) {
-    const auto channels = SplitChannels(bits);
-    const auto bpskChannels = Modulation::ModulateChannels(channels, type);
-
-    if (bpskChannels.empty()) {
-        return {};
-    }
+    if (modulated.empty()) return {};
 
     int symbolsPerChannel = 0;
-    for (const auto& channel : bpskChannels) {
-        symbolsPerChannel = std::max(symbolsPerChannel, static_cast<int>(channel.size()));
+    for (const auto& ch : modulated) {
+        symbolsPerChannel = std::max(symbolsPerChannel, static_cast<int>(ch.size()));
     }
 
-    if (symbolsPerChannel == 0) {
-        return {};
-    }
+    if (symbolsPerChannel == 0) return {};
 
-    const int spectrumSize = symbolsPerChannel * kChannelCount;
+    // Для каждого символьного индекса строим один OFDM-символ:
+    // kSubcarrierCount активных бинов в kFftSize-точечном спектре → IFFT → kFftSize отсчётов
+    std::vector<Complex> signal;
+    signal.reserve(static_cast<size_t>(symbolsPerChannel * fftSize));
 
-    std::vector<Complex> spectrum(static_cast<size_t>(spectrumSize), Complex(0.0, 0.0));
+    for (int sym = 0; sym < symbolsPerChannel; ++sym) {
+        std::vector<Complex> spectrum(static_cast<size_t>(fftSize), Complex(0.0, 0.0));
 
-    for (int channel = 0; channel < kChannelCount; ++channel) {
-        const auto& values = bpskChannels[static_cast<size_t>(channel)];
-        for (int symbol = 0; symbol < static_cast<int>(values.size()); ++symbol) {
-            const int bin = channel + symbol * kChannelCount;
-            if (bin < spectrumSize) {
-                spectrum[static_cast<size_t>(bin)] = values[static_cast<size_t>(symbol)];
+        for (int sub = 0; sub < subcarrierCount; ++sub) {
+            if (sym < static_cast<int>(modulated[sub].size())) {
+                // Поднесущие равномерно распределены по спектру
+                const int bin = sub * fftSize / subcarrierCount;
+                spectrum[static_cast<size_t>(bin)] = modulated[sub][sym];
             }
+        }
+
+        const auto timeSymbol = FourierTransform::IFFT(spectrum);
+        for (const auto& sample : timeSymbol) {
+            signal.push_back(sample);
         }
     }
 
-    return FourierTransform::IFFT(spectrum);
+    return signal;
 }
 
 std::vector<Complex> InstantSpectrum(const std::vector<Complex>& signal, int offset, int length) {

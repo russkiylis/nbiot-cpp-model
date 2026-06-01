@@ -5,4 +5,5 @@
 
 std::vector<int> GenerateBitSequence(long length);
 std::vector<int> GenerateBitSequence(long length, std::uint32_t seed);
-std::vector<std::vector<int>> SplitChannels(const std::vector<int>& bits);
+// channelCount — число каналов (поднесущих), по умолчанию 4
+std::vector<std::vector<int>> SplitChannels(const std::vector<int>& bits, int channelCount = 4);

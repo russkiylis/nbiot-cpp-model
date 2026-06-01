@@ -39,8 +39,8 @@ ApplicationWindow {
 
                     BarSeries {
                         id: spectrum0
-                        barWidth: 0.15
-                        BarSet { id: spectrum0set }
+                        barWidth: 0.3
+                        BarSet { id: spectrum0set; color: "#FF0000" }
                     }
                 }
             }
@@ -64,8 +64,8 @@ ApplicationWindow {
 
                     BarSeries {
                         id: spectrum1
-                        barWidth: 0.15
-                        BarSet { id: spectrum1set }
+                        barWidth: 0.3
+                        BarSet { id: spectrum1set; color: "#FF0000" }
                     }
                 }
             }
@@ -89,8 +89,8 @@ ApplicationWindow {
 
                     BarSeries {
                         id: spectrum2
-                        barWidth: 0.15
-                        BarSet { id: spectrum2set }
+                        barWidth: 0.3
+                        BarSet { id: spectrum2set; color: "#FF0000" }
                     }
                 }
             }
@@ -114,8 +114,8 @@ ApplicationWindow {
 
                     BarSeries {
                         id: averageSpectrum
-                        barWidth: 0.15
-                        BarSet { id: averageSpectrumSet }
+                        barWidth: 0.3
+                        BarSet { id: averageSpectrumSet; color: "#FF0000" }
                     }
                 }
             }
