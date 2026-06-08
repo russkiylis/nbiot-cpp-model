@@ -10,7 +10,7 @@ std::vector<Complex> AddCyclicPrefix(const std::vector<Complex>& symbol, int cpL
     result.reserve(static_cast<size_t>(n + cp));
 
     // Хвост символа длиной cp — циклический префикс
-    for (int i = n - cp; i < n; ++i)
+    for (int i = n - cp; i < n; i++)
         result.push_back(symbol[static_cast<size_t>(i)]);
 
     // Сам символ

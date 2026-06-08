@@ -69,7 +69,7 @@ QVariantList GraphDataProvider::toPointList(const std::vector<Complex>& values) 
     QVariantList points;
     points.reserve(static_cast<qsizetype>(values.size()));
 
-    for (size_t index = 0; index < values.size(); ++index) {
+    for (size_t index = 0; index < values.size(); index++) {
         QVariantMap point;
         point.insert(QStringLiteral("x"), static_cast<double>(index));
         point.insert(QStringLiteral("y"), values[index].abs());

@@ -28,10 +28,10 @@ std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationTyp
     std::vector<Complex> signal;
     signal.reserve(static_cast<size_t>(symbolsPerChannel * symbolLen));
 
-    for (int sym = 0; sym < symbolsPerChannel; ++sym) {
+    for (int sym = 0; sym < symbolsPerChannel; sym++) {
         std::vector<Complex> spectrum(static_cast<size_t>(fftSize), Complex(0.0, 0.0));
 
-        for (int sub = 0; sub < subcarrierCount; ++sub) {
+        for (int sub = 0; sub < subcarrierCount; sub++) {
             if (sym < static_cast<int>(modulated[sub].size())) {
                 // Поднесущие равномерно распределены по спектру
                 const int bin = sub * fftSize / subcarrierCount;
@@ -57,7 +57,7 @@ std::vector<Complex> InstantSpectrum(const std::vector<Complex>& signal, int off
 
     std::vector<Complex> window;
     window.reserve(static_cast<size_t>(actualLength));
-    for (int i = 0; i < actualLength; ++i) {
+    for (int i = 0; i < actualLength; i++) {
         window.push_back(signal[static_cast<size_t>(offset + i)]);
     }
 
@@ -95,13 +95,13 @@ std::vector<Complex> AverageSpectrum(const std::vector<std::vector<Complex>>& sp
     std::vector<int> counts(maxSize, 0);
 
     for (const auto& spectrum : spectra) {
-        for (size_t index = 0; index < spectrum.size(); ++index) {
+        for (size_t index = 0; index < spectrum.size(); index++) {
             average[index].re += spectrum[index].abs();
             ++counts[index];
         }
     }
 
-    for (size_t index = 0; index < average.size(); ++index) {
+    for (size_t index = 0; index < average.size(); index++) {
         if (counts[index] > 0) {
             average[index].re /= static_cast<double>(counts[index]);
         }

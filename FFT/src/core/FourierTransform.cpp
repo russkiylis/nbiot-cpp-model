@@ -54,7 +54,7 @@ std::vector<Complex> FourierTransform::FFT(const std::vector<Complex>& input) {
     // Алгоритм Кули-Тьюки (итеративный Decimation-In-Time).
     // Шаг 1: перестановка элементов в битово-обратном порядке (bit-reversal permutation).
     // Это эквивалентно рекурсивному разбиению чётных/нечётных индексов.
-    for (int i = 1, j = 0; i < n; ++i) {
+    for (int i = 1, j = 0; i < n; i++) {
         int bit = n >> 1;
         for (; j & bit; bit >>= 1) {
             j ^= bit;
@@ -98,7 +98,7 @@ std::vector<Complex> FourierTransform::IFFT(const std::vector<Complex>& input) {
     int n = output.size();
 
     // Bit-reversal permutation — аналогично прямому БПФ
-    for (int i = 1, j = 0; i < n; ++i) {
+    for (int i = 1, j = 0; i < n; i++) {
         int bit = n >> 1;
         for (; j & bit; bit >>= 1) {
             j ^= bit;
