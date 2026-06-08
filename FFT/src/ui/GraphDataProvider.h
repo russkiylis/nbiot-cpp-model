@@ -13,6 +13,8 @@ class GraphDataProvider : public QObject {
     Q_PROPERTY(int windowSize READ windowSize CONSTANT)
     Q_PROPERTY(int spectrumCount READ spectrumCount CONSTANT)
     Q_PROPERTY(qreal spectrumMax READ spectrumMax CONSTANT)
+    Q_PROPERTY(int cpLength READ cpLength CONSTANT)
+    Q_PROPERTY(int startOffset READ startOffset CONSTANT)
 
 public:
     explicit GraphDataProvider(QObject* parent = nullptr);
@@ -20,6 +22,8 @@ public:
     int windowSize() const;
     int spectrumCount() const;
     qreal spectrumMax() const;
+    int cpLength() const;
+    int startOffset() const;
 
     Q_INVOKABLE QVariantList spectrumPoints(int window) const;
     Q_INVOKABLE QVariantList averageSpectrumPoints() const;

@@ -1,12 +1,13 @@
 #include "OfdmSignal.h"
 
 #include "BitUtils.h"
+#include "CyclicPrefix.h"
 #include "FourierTransform.h"
 #include "Modulation.h"
 
 #include <algorithm>
 
-std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationType type, int subcarrierCount, int fftSize) {
+std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationType type, int subcarrierCount, int fftSize, int cpLength) {
     // Разбиваем биты по числу поднесущих и модулируем каждый канал
     const auto channels = SplitChannels(bits, subcarrierCount);
     const auto modulated = Modulation::ModulateChannels(channels, type);
@@ -22,8 +23,10 @@ std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationTyp
 
     // Для каждого символьного индекса строим один OFDM-символ:
     // kSubcarrierCount активных бинов в kFftSize-точечном спектре → IFFT → kFftSize отсчётов
+    const int symbolLen = fftSize + std::max(0, std::min(cpLength, fftSize));
+
     std::vector<Complex> signal;
-    signal.reserve(static_cast<size_t>(symbolsPerChannel * fftSize));
+    signal.reserve(static_cast<size_t>(symbolsPerChannel * symbolLen));
 
     for (int sym = 0; sym < symbolsPerChannel; ++sym) {
         std::vector<Complex> spectrum(static_cast<size_t>(fftSize), Complex(0.0, 0.0));
@@ -36,10 +39,9 @@ std::vector<Complex> BuildOfdmSignal(const std::vector<int>& bits, ModulationTyp
             }
         }
 
-        const auto timeSymbol = FourierTransform::IFFT(spectrum);
-        for (const auto& sample : timeSymbol) {
+        const auto symbolWithCp = AddCyclicPrefix(FourierTransform::IFFT(spectrum), cpLength);
+        for (const auto& sample : symbolWithCp)
             signal.push_back(sample);
-        }
     }
 
     return signal;
@@ -62,13 +64,15 @@ std::vector<Complex> InstantSpectrum(const std::vector<Complex>& signal, int off
     return FourierTransform::FFT(window);
 }
 
-std::vector<std::vector<Complex>> InstantSpectra(const std::vector<Complex>& signal, int length, int step) {
+std::vector<std::vector<Complex>> InstantSpectra(const std::vector<Complex>& signal, int length, int step, int startOffset) {
     std::vector<std::vector<Complex>> spectra;
     if (length <= 0 || step <= 0 || signal.empty()) {
         return spectra;
     }
 
-    for (int offset = 0; offset + length <= static_cast<int>(signal.size()); offset += step) {
+    // startOffset пропускает CP первого символа; дальнейшие окна смещаются на step,
+    // который равен fftSize + cpLength — так каждое окно попадает ровно на полезную часть символа
+    for (int offset = startOffset; offset + length <= static_cast<int>(signal.size()); offset += step) {
         spectra.push_back(InstantSpectrum(signal, offset, length));
     }
 

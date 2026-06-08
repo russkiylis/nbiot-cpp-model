@@ -10,18 +10,20 @@
 #include <algorithm>
 
 namespace {
-constexpr int kBitCount = 512;        // общее число бит
-constexpr int kFftSize = 32;          // размер ОБПФ/БПФ одного OFDM-символа
-constexpr int kWindowSize = 32; // окно приёмника = длине символа
-constexpr int kStepSize = 35;   // шаг = длине символа: каждое окно — отдельный OFDM-символ
-constexpr int kSubcarrierCount = 8;  // число активных поднесущих (1..20)
+constexpr int kBitCount       = 512;                      // общее число бит
+constexpr int kFftSize        = 32;                       // размер ОБПФ/БПФ одного OFDM-символа
+constexpr int kCpLength       = 8;                        // длина циклического префикса (0 = без CP)
+constexpr int kStartOffset    = 8;                // сдвиг первого окна приёмника (0 = игнорировать CP)
+constexpr int kWindowSize     = 32;                       // окно анализа = полезной части символа
+constexpr int kStepSize       = 40;                       // шаг = полная длина символа с CP
+constexpr int kSubcarrierCount = 8;                       // число активных поднесущих
 constexpr ModulationType kModulationType = ModulationType::Bpsk; // Bpsk | Qpsk | Psk16
 }
 
 GraphDataProvider::GraphDataProvider(QObject* parent)
     : QObject(parent),
-      m_ofdmSignal(BuildOfdmSignal(GenerateBitSequence(kBitCount), kModulationType, kSubcarrierCount, kFftSize)) {
-    m_spectra = InstantSpectra(m_ofdmSignal, kWindowSize, kStepSize);
+      m_ofdmSignal(BuildOfdmSignal(GenerateBitSequence(kBitCount), kModulationType, kSubcarrierCount, kFftSize, kCpLength)) {
+    m_spectra = InstantSpectra(m_ofdmSignal, kWindowSize, kStepSize, kStartOffset);
     m_averageSpectrum = AverageSpectrum(m_spectra);
 
     for (const auto& spectrum : m_spectra) {
@@ -33,6 +35,14 @@ GraphDataProvider::GraphDataProvider(QObject* parent)
 
 int GraphDataProvider::windowSize() const {
     return kWindowSize;
+}
+
+int GraphDataProvider::cpLength() const {
+    return kCpLength;
+}
+
+int GraphDataProvider::startOffset() const {
+    return kStartOffset;
 }
 
 int GraphDataProvider::spectrumCount() const {

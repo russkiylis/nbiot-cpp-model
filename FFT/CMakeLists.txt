@@ -20,6 +20,7 @@ qt_policy(SET QTP0004 NEW)
 
 set(CORE_SOURCES
     src/core/BitUtils.cpp
+    src/core/CyclicPrefix.cpp
     src/core/FourierTransform.cpp
     src/core/Modulation.cpp
     src/core/OfdmSignal.cpp
@@ -29,6 +30,7 @@ set(CORE_SOURCES
 set(CORE_HEADERS
     src/core/BitUtils.h
     src/core/ComplexNumber.h
+    src/core/CyclicPrefix.h
     src/core/FourierTransform.h
     src/core/OfdmSignal.h
     src/core/Modulation.h
