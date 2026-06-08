@@ -1,7 +1,6 @@
 #include "GraphDataProvider.h"
 
 #include "BitUtils.h"
-#include "OfdmConfig.h"
 #include "OfdmSignal.h"
 #include "SignalStats.h"
 
@@ -9,6 +8,17 @@
 #include <QString>
 
 #include <algorithm>
+
+namespace {
+constexpr int            kBitCount        = 512;
+constexpr int            kFftSize         = 32;
+constexpr int            kCpLength        = 8;
+constexpr int            kStartOffset     = kCpLength;
+constexpr int            kWindowSize      = kFftSize;
+constexpr int            kStepSize        = kFftSize + kCpLength;
+constexpr int            kSubcarrierCount = 8;
+constexpr ModulationType kModulationType  = ModulationType::Bpsk;
+}
 
 GraphDataProvider::GraphDataProvider(QObject* parent)
     : QObject(parent),
