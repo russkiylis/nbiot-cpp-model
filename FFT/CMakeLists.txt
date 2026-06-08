@@ -32,6 +32,7 @@ set(CORE_HEADERS
     src/core/ComplexNumber.h
     src/core/CyclicPrefix.h
     src/core/FourierTransform.h
+    src/core/OfdmConfig.h
     src/core/OfdmSignal.h
     src/core/Modulation.h
     src/core/SignalStats.h

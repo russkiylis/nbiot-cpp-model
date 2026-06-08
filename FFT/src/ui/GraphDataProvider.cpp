@@ -1,6 +1,7 @@
 #include "GraphDataProvider.h"
 
 #include "BitUtils.h"
+#include "OfdmConfig.h"
 #include "OfdmSignal.h"
 #include "SignalStats.h"
 
@@ -8,17 +9,6 @@
 #include <QString>
 
 #include <algorithm>
-
-namespace {
-constexpr int kBitCount       = 512;                      // общее число бит
-constexpr int kFftSize        = 32;                       // размер ОБПФ/БПФ одного OFDM-символа
-constexpr int kCpLength       = 8;                        // длина циклического префикса (0 = без CP)
-constexpr int kStartOffset    = 8;                // сдвиг первого окна приёмника (0 = игнорировать CP)
-constexpr int kWindowSize     = 32;                       // окно анализа = полезной части символа
-constexpr int kStepSize       = 40;                       // шаг = полная длина символа с CP
-constexpr int kSubcarrierCount = 8;                       // число активных поднесущих
-constexpr ModulationType kModulationType = ModulationType::Bpsk; // Bpsk | Qpsk | Psk16
-}
 
 GraphDataProvider::GraphDataProvider(QObject* parent)
     : QObject(parent),
