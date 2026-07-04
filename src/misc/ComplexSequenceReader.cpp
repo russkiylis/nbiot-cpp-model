@@ -71,10 +71,10 @@ std::complex<float> ComplexSequenceReader::parseComplex(const std::string& token
         temp.pop_back();
     }
     
-    // Ищем позицию разделителя между real и imag
+    // Ищем позицию разделителя между действ и мним частями
     size_t pos = temp.find('+');
     if (pos == std::string::npos) {
-        // Ищем минус, начиная с позиции 1 (чтобы не захватить минус в real части)
+        // Ищем минус, начиная с позиции 1 (чтобы не захватить минус в действ части)
         pos = temp.find('-', 1);
     }
     

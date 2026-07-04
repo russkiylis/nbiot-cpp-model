@@ -109,7 +109,7 @@ TEST(test_NsssGenerator, AllCombos){
                 }
             }
             
-            // Проверка для Google Test (каждый элемент)
+            // Проверка (каждый элемент)
             for (size_t i = 0; i < Gen_sequence.size(); ++i) {
                 EXPECT_NEAR(Gen_sequence[i].real(), Read_sequence[start_pos + i].real(), tolerance)
                         << "ncell_id=" << ncell_id << ", frame_id=" << frame_id << ", index=" << i;
