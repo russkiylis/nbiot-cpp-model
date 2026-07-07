@@ -1,14 +1,6 @@
-/**
- * @file test_crc16_bitwise.cpp
- * @author russkiylis x Tobyret101
- * @brief Тестирование CRC-16
- * @version 0.2
- * @date 04.07.2026
- * 
- */
 
 #include <gtest/gtest.h>
-#include "code/crc16_bitwise.h"
+#include "code/tbcc.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -36,7 +28,7 @@ static std::string bytesToString(const std::vector<uint8_t>& bytes, size_t bitCo
 }
 
 // Конвертация строки битов в вектор битов
-std::vector<uint8_t> stringToBitVector(const std::string& bits) {
+static std::vector<uint8_t> stringToBitVector(const std::string& bits) {
     std::vector<uint8_t> vec;
     vec.reserve(bits.length());
     for (char c : bits) {
@@ -45,88 +37,92 @@ std::vector<uint8_t> stringToBitVector(const std::string& bits) {
     return vec;
 }
 
-TEST(test_CRC16_bitwise, All10000Sequences) {
-    std::string path34 = std::string(INPUT_DIR) + "random_34bit_sequences.txt";
+TEST(test_TBCC, All10000Sequences) {
     std::string path50 = std::string(INPUT_DIR) + "random_34bit_with_crc.txt";
+    std::string path150 = std::string(INPUT_DIR) + "random_34bit_tbcc.txt";
     
-    std::ifstream f34(path34);
     std::ifstream f50(path50);
+    std::ifstream f150(path150);
     
-    ASSERT_TRUE(f34.is_open()) << "Файл не найден: " << path34;
     ASSERT_TRUE(f50.is_open()) << "Файл не найден: " << path50;
+    ASSERT_TRUE(f150.is_open()) << "Файл не найден: " << path150;
     
-    std::string s34, s50;
+    std::string s50, s150;
     int failed = 0;
     int lineCount = 0;
     
-    // Создаём объект CRC
-    CRC16Bitwise crc;
+    // Создаём объект TBCC
+    TBCC tbcc;
     
     // Векторы для хранения первых 10 строк
-    std::vector<std::string> first10_s34;
     std::vector<std::string> first10_s50;
+    std::vector<std::string> first10_s150;
     std::vector<std::string> first10_result;
     std::vector<bool> first10_status;
     
-    while (std::getline(f34, s34) && std::getline(f50, s50)) {
+    while (std::getline(f50, s50) && std::getline(f150, s150)) {
         lineCount++;
         
         // Удаляем \r для Windows-файлов
-        if (!s34.empty() && s34.back() == '\r') s34.pop_back();
         if (!s50.empty() && s50.back() == '\r') s50.pop_back();
+        if (!s150.empty() && s150.back() == '\r') s150.pop_back();
         
-        ASSERT_EQ(s34.length(), 34) << "Строка " << lineCount << " имеет длину " << s34.length();
+        // Проверяем длину
         ASSERT_EQ(s50.length(), 50) << "Строка " << lineCount << " имеет длину " << s50.length();
+        ASSERT_EQ(s150.length(), 150) << "Строка " << lineCount << " имеет длину " << s150.length();
         
-        // Конвертируем строку в вектор битов
-        auto bits = stringToBitVector(s34);
+        // Конвертируем 50 бит в вектор
+        auto bits = stringToBitVector(s50);
         
-        // Вычисляем CRC
-        auto result = crc.calculate(bits);
+        // Вычисляем TBCC
+        auto result = tbcc.encode(bits);
+        
+        // Конвертируем результат в строку
         std::string result_str;
         for (uint8_t b : result) {
             result_str.push_back(b ? '1' : '0');
         }
         
+        // Проверка размера
+        EXPECT_EQ(result_str.length(), 150) << "Строка " << lineCount << " имеет длину " << result_str.length();
+        
         // Сохраняем первые 10 строк для вывода после итога
         if (lineCount <= 10) {
-            first10_s34.push_back(s34);
             first10_s50.push_back(s50);
+            first10_s150.push_back(s150);
             first10_result.push_back(result_str);
-            first10_status.push_back(result_str == s50);
+            first10_status.push_back(result_str == s150);
         }
         
-        if (result_str != s50) {
+        if (result_str != s150) {
             failed++;
         }
     }
     
-    f34.close();
     f50.close();
+    f150.close();
     
     // ========== СНАЧАЛА ВЫВОДИМ ИТОГ ==========
     std::cout << "\n=== ИТОГ ===\n";
     std::cout << "Всего строк: " << lineCount << "\n";
     std::cout << "Не прошло: " << failed << "\n";
     std::cout << "Прошло: " << (lineCount - failed) << "\n";
-    if (lineCount > 0) {
-        std::cout << "Процент: " << (100.0 * (lineCount - failed) / lineCount) << "%\n";
-    }
+    std::cout << "Процент: " << (100.0 * (lineCount - failed) / lineCount) << "%\n";
     
     // ========== ПОТОМ ПЕРВЫЕ 10 СТРОК ==========
-    std::cout << "\n=== ПЕРВЫЕ 10 РЕЗУЛЬТАТОВ CRC ===\n";
-    for (size_t i = 0; i < first10_s34.size(); i++) {
+    std::cout << "\n=== ПЕРВЫЕ 10 РЕЗУЛЬТАТОВ TBCC ===\n";
+    for (size_t i = 0; i < first10_s50.size(); i++) {
         std::cout << "\n[" << i+1 << "]\n";
-        std::cout << "  34 бита:   " << first10_s34[i] << "\n";
-        std::cout << "  Ожидается: " << first10_s50[i] << "\n";
+        std::cout << "  50 бит:     " << first10_s50[i] << "\n";
+        std::cout << "  Ожидается: " << first10_s150[i] << "\n";
         std::cout << "  Вычислено: " << first10_result[i] << "\n";
         std::cout << "  Статус:  " << (first10_status[i] ? "OK" : "FAIL") << "\n";
         
         if (!first10_status[i]) {
-            for (size_t j = 0; j < 50; j++) {
-                if (first10_result[i][j] != first10_s50[i][j]) {
+            for (size_t j = 0; j < 150; j++) {
+                if (first10_result[i][j] != first10_s150[i][j]) {
                     std::cout << "  Первая ошибка на позиции " << j << "\n";
-                    std::cout << "  Ожидалось: " << first10_s50[i][j] << ", получено: " << first10_result[i][j] << "\n";
+                    std::cout << "  Ожидалось: " << first10_s150[i][j] << ", получено: " << first10_result[i][j] << "\n";
                     break;
                 }
             }
@@ -134,4 +130,25 @@ TEST(test_CRC16_bitwise, All10000Sequences) {
     }
     
     EXPECT_EQ(failed, 0) << "Не прошло " << failed << " из " << lineCount;
+}
+
+// Дополнительный тест: проверка одной конкретной строки
+TEST(test_TBCC, SingleSequence) {
+    // Вход: 50 бит (первая строка из файла)
+    std::string input = "10010111110000011011011001110010111001000001101110";
+    
+    // Ожидаемый выход (из эталонного файла)
+    std::string expected = "000000101010101100101010001011111011100010011000100100110011001101100001010111001000101000100001011101010110111100001100001001100000100100110011110001";
+    
+    TBCC tbcc;
+    auto bits = stringToBitVector(input);
+    auto result = tbcc.encode(bits);
+    
+    std::string result_str;
+    for (uint8_t b : result) {
+        result_str.push_back(b ? '1' : '0');
+    }
+    
+    ASSERT_EQ(result_str.length(), 150);
+    EXPECT_EQ(result_str, expected);
 }
