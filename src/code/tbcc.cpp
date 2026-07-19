@@ -2,6 +2,9 @@
 #include "code/tbcc.h"
 #include <cstddef>
 #include <stdexcept>
+// Возможно надо рассмотреть иной вариант, без отдельных таблиц под шесть итераций
+// Кроме того, сам формат записи 50х3 должен быть задан явно, либо 50 после 50 после 50
+// либо смежно - 1, 1, 1, 2, 2.. - огромная роль для тяжелого рейт-матчера
 
 std::vector<uint8_t> TBCC::stringToBits(const std::string& str) {
     std::vector<uint8_t> bits;

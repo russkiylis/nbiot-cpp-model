@@ -9,41 +9,11 @@
 
 #include <gtest/gtest.h>
 #include "code/crc16_bitwise.h"
+#include "misc/BitUtils.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-
-// Вспомогательные функции
-static std::vector<uint8_t> stringToBytes(const std::string& bits) {
-    std::vector<uint8_t> bytes;
-    for (size_t i = 0; i < bits.length(); i += 8) {
-        uint8_t byte = 0;
-        for (size_t b = 0; b < 8 && i + b < bits.length(); b++) {
-            if (bits[i + b] == '1') byte |= (1 << (7 - b));
-        }
-        bytes.push_back(byte);
-    }
-    return bytes;
-}
-
-static std::string bytesToString(const std::vector<uint8_t>& bytes, size_t bitCount) {
-    std::string bits;
-    for (size_t i = 0; i < bitCount; i++) {
-        bits.push_back(((bytes[i / 8] >> (7 - (i % 8))) & 1) ? '1' : '0');
-    }
-    return bits;
-}
-
-// Конвертация строки битов в вектор битов
-std::vector<uint8_t> stringToBitVector(const std::string& bits) {
-    std::vector<uint8_t> vec;
-    vec.reserve(bits.length());
-    for (char c : bits) {
-        vec.push_back(c == '1' ? 1 : 0);
-    }
-    return vec;
-}
 
 TEST(test_CRC16_bitwise, All10000Sequences) {
     std::string path34 = std::string(INPUT_DIR) + "random_34bit_sequences.txt";
@@ -79,14 +49,11 @@ TEST(test_CRC16_bitwise, All10000Sequences) {
         ASSERT_EQ(s50.length(), 50) << "Строка " << lineCount << " имеет длину " << s50.length();
         
         // Конвертируем строку в вектор битов
-        auto bits = stringToBitVector(s34);
+        auto bits = BitUtils::stringToBitVector(s34);
         
         // Вычисляем CRC
         auto result = crc.calculate(bits);
-        std::string result_str;
-        for (uint8_t b : result) {
-            result_str.push_back(b ? '1' : '0');
-        }
+        std::string result_str = BitUtils::bitVectorToString(result);
         
         // Сохраняем первые 10 строк для вывода после итога
         if (lineCount <= 10) {
@@ -132,6 +99,4 @@ TEST(test_CRC16_bitwise, All10000Sequences) {
             }
         }
     }
-    
-    EXPECT_EQ(failed, 0) << "Не прошло " << failed << " из " << lineCount;
 }

@@ -7,34 +7,15 @@
  * 
  */
 
- #include <gtest/gtest.h>
- #include "code/crc16.h"
- #include <iostream>
- #include <fstream>
- #include <string>
- #include <vector>
+#include <gtest/gtest.h>
+#include "code/crc16.h"
+#include "misc/BitUtils.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 
-    static std::vector<uint8_t> stringToBytes(const std::string& bits) {
-    std::vector<uint8_t> bytes;
-    for (size_t i = 0; i < bits.length(); i += 8) {
-        uint8_t byte = 0;
-        for (size_t b = 0; b < 8 && i + b < bits.length(); b++) {
-            if (bits[i + b] == '1') byte |= (1 << (7 - b));
-        }
-        bytes.push_back(byte);
-    }
-    return bytes;
-    }
-
-    static std::string bytesToString(const std::vector<uint8_t>& bytes, size_t bitCount) {
-    std::string bits;
-    for (size_t i = 0; i < bitCount; i++) {
-        bits.push_back(((bytes[i / 8] >> (7 - (i % 8))) & 1) ? '1' : '0');
-    }
-    return bits;
-    }
-
- TEST(test_CRC16, All10000Sequences) {
+TEST(test_CRC16, All10000Sequences) {
     CRC16::reset();  // сбросить состояние перед тестом
     
     std::string path34 = std::string(INPUT_DIR) + "random_34bit_sequences.txt";
@@ -67,9 +48,9 @@
         ASSERT_EQ(s34.length(), 34) << "Строка " << lineCount << " имеет длину " << s34.length();
         ASSERT_EQ(s50.length(), 50) << "Строка " << lineCount << " имеет длину " << s50.length();
         
-        auto bytes = stringToBytes(s34);
+        auto bytes = BitUtils::stringToBytes(s34);
         CRC16::append(bytes);
-        std::string result = bytesToString(bytes, 50);
+        std::string result = BitUtils::bytesToString(bytes, 50);
         
         // Сохраняем первые 10 строк для вывода после итога
         if (lineCount <= 10) {
@@ -110,12 +91,10 @@
         if (!first10_status[i]) {
             for (size_t j = 0; j < 50; j++) {
                 if (first10_result[i][j] != first10_s50[i][j]) {
-                    std::cout << "  Первая ошибка на CRC-позиции " << j-33 << "\n";
+                    std::cout << "  Первая ошибка на CRC-позиции " << j - 33 << "\n";
                     break;
                 }
             }
         }
     }
-    
-    //EXPECT_EQ(failed, 0) << "Не прошло " << failed << " из " << lineCount;
 }

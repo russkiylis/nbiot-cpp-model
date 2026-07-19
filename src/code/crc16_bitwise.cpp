@@ -10,6 +10,9 @@
 #include "code/crc16_bitwise.h"
 #include <sstream>
 #include <iomanip>
+// Побитовая реализация использует массивы для рассмотрения, однако
+// есть иной вариант - использование unsigned long, потенциально даст серьезный прирост
+// скорости и памяти
 
 std::vector<uint8_t> CRC16Bitwise::stringToBits(const std::string& str) {
     std::vector<uint8_t> bits;
