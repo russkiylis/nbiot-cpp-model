@@ -32,8 +32,7 @@ const std::array<std::complex<float>, 121>& NpssGenerator::getNpssSequence() con
             for (int l = 0; l < 11; l++) {
                 int index = n * 11 + l;
 
-                // static_cast<float> — явное преобразование из double (M_PI)
-                // во float, чтобы избежать предупреждений компилятора
+                // Явное приведение к float для единообразия типов в вычислениях
                 sequence[index] =
                     static_cast<float>(s_[l]) *
                     std::exp(std::complex<float>(
