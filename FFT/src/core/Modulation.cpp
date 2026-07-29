@@ -2,80 +2,86 @@
 
 #include <cmath>
 
-namespace {
-
-// Преобразует код Грея в натуральный двоичный индекс.
-// Соседние точки на созвездии будут отличаться ровно на 1 бит.
-int GrayToIndex(int gray) {
+//перевод из кода Гпрея в индекс для дальнейшего вычисления угла
+int Modulation::grayToIndex(int gray) {
     int index = 0;
     for (; gray > 0; gray >>= 1)
         index ^= gray;
     return index;
 }
 
+Modulation::Modulation(ModulationType type)
+    : m_type(type) {}
+
+ModulationType Modulation::type() const {
+    return m_type;
 }
 
-Complex Modulation::BpskMapBit(int bit) {
-    if (bit == 0) {
-        return Complex(1.0, 0.0);
+// В зависимости от типа модуляции, возвращает количество бит на символ
+// Нужно для выравнивания потока
+int Modulation::bitsPerSymbol() const {
+    switch (m_type) {
+        case ModulationType::Bpsk:  return 1;
+        case ModulationType::Qpsk:  return 2;
+        case ModulationType::Psk8:  return 3;
+        case ModulationType::Psk16: return 4;
     }
-    
-    return Complex(-1.0, 0.0);
+    return 1;
 }
 
-std::vector<Complex> Modulation::Bpsk(const std::vector<int>& bits) {
-
-    std::vector<Complex> symbols;
-    symbols.reserve(bits.size());
-
-    for (int bit : bits) {
-        symbols.push_back(BpskMapBit(bit));
-    }
-
-    return symbols;
+// выполняет преобразование одного бита в комплексное число
+Complex Modulation::bpskMap(int bit) {
+    return bit == 0 ? Complex(1.0, 0.0) : Complex(-1.0, 0.0);
 }
 
-Complex Modulation::QpskMapBits(int b0, int b1) {
-    int index = GrayToIndex(b0 * 2 + b1);
-    double angle = PI / 4.0 + index * PI / 2.0; // точки на 45°, 135°, 225°, 315°
+// выполняет преобразование двух битов в комплексное число
+Complex Modulation::qpskMap(int b0, int b1) {
+    int index = grayToIndex(b0 * 2 + b1);
+    double angle = PI / 4.0 + index * PI / 2.0;
     return Complex(std::cos(angle), std::sin(angle));
 }
 
-std::vector<Complex> Modulation::Qpsk(const std::vector<int>& bits) {
-    std::vector<Complex> symbols;
-    symbols.reserve(bits.size() / 2);
-    for (size_t i = 0; i + 1 < bits.size(); i += 2) {
-        symbols.push_back(QpskMapBits(bits[i], bits[i + 1]));
-    }
-    return symbols;
-}
-
-Complex Modulation::Psk16MapBits(int b0, int b1, int b2, int b3) {
-    int index = GrayToIndex(b0 * 8 + b1 * 4 + b2 * 2 + b3);
-    double angle = PI / 16.0 + index * 2.0 * PI / 16.0; // точки начиная с 11.25°, шаг 22.5°
+// выполняет преобразование трех битов в комплексное число
+Complex Modulation::psk8Map(int b0, int b1, int b2) {
+    int index = grayToIndex(b0 * 4 + b1 * 2 + b2);
+    double angle = PI / 8.0 + index * 2.0 * PI / 8.0;
     return Complex(std::cos(angle), std::sin(angle));
 }
 
-std::vector<Complex> Modulation::Psk16(const std::vector<int>& bits) {
-    std::vector<Complex> symbols;
-    symbols.reserve(bits.size() / 4);
-    for (size_t i = 0; i + 3 < bits.size(); i += 4) {
-        symbols.push_back(Psk16MapBits(bits[i], bits[i + 1], bits[i + 2], bits[i + 3]));
-    }
-    return symbols;
+Complex Modulation::psk16Map(int b0, int b1, int b2, int b3) {
+    int index = grayToIndex(b0 * 8 + b1 * 4 + b2 * 2 + b3);
+    double angle = PI / 16.0 + index * 2.0 * PI / 16.0;
+    return Complex(std::cos(angle), std::sin(angle));
 }
 
-std::vector<std::vector<Complex>> Modulation::ModulateChannels(
-    const std::vector<std::vector<int>>& channels, ModulationType type)
-{
-    std::vector<std::vector<Complex>> modulated;
-    modulated.reserve(channels.size());
-    for (const auto& channel : channels) {
-        switch (type) {
-            case ModulationType::Bpsk:  modulated.push_back(Bpsk(channel));  break;
-            case ModulationType::Qpsk:  modulated.push_back(Qpsk(channel));  break;
-            case ModulationType::Psk16: modulated.push_back(Psk16(channel)); break;
+// Основной алгоритм модуляции
+std::vector<Complex> Modulation::modulate(const std::vector<int>& bits) const {
+    int bps = bitsPerSymbol();
+
+    std::vector<int> padded = bits;
+    int rem = static_cast<int>(padded.size()) % bps;
+    if (rem != 0)
+        padded.resize(padded.size() + (bps - rem), 0);
+
+    std::vector<Complex> symbols;
+    symbols.reserve(padded.size() / static_cast<size_t>(bps));
+
+    for (size_t i = 0; i < padded.size(); i += bps) {
+        switch (m_type) {
+            case ModulationType::Bpsk:
+                symbols.push_back(bpskMap(padded[i]));
+                break;
+            case ModulationType::Qpsk:
+                symbols.push_back(qpskMap(padded[i], padded[i + 1]));
+                break;
+            case ModulationType::Psk8:
+                symbols.push_back(psk8Map(padded[i], padded[i + 1], padded[i + 2]));
+                break;
+            case ModulationType::Psk16:
+                symbols.push_back(psk16Map(padded[i], padded[i + 1], padded[i + 2], padded[i + 3]));
+                break;
         }
     }
-    return modulated;
+
+    return symbols;
 }

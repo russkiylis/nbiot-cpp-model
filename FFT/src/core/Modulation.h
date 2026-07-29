@@ -2,19 +2,26 @@
 #include <vector>
 #include "ComplexNumber.h"
 
-enum class ModulationType { Bpsk, Qpsk, Psk16 };
+enum class ModulationType { Bpsk, Qpsk, Psk8, Psk16 };
 
 class Modulation {
 public:
-    static Complex BpskMapBit(int bit);
-    static std::vector<Complex> Bpsk(const std::vector<int>& bits);
+    explicit Modulation(ModulationType type);
 
-    static Complex QpskMapBits(int b0, int b1);
-    static std::vector<Complex> Qpsk(const std::vector<int>& bits);
+    // Маппинг потока бит → вектор символов созвездия
+    std::vector<Complex> modulate(const std::vector<int>& bits) const;
 
-    static Complex Psk16MapBits(int b0, int b1, int b2, int b3);
-    static std::vector<Complex> Psk16(const std::vector<int>& bits);
+    // Сколько бит кодирует один символ (1 / 2 / 4)
+    int bitsPerSymbol() const;
 
-    static std::vector<std::vector<Complex>> ModulateChannels(
-        const std::vector<std::vector<int>>& channels, ModulationType type);
+    ModulationType type() const;
+
+private:
+    ModulationType m_type;
+
+    static int grayToIndex(int gray);
+    static Complex bpskMap(int bit);
+    static Complex qpskMap(int b0, int b1);
+    static Complex psk8Map(int b0, int b1, int b2);
+    static Complex psk16Map(int b0, int b1, int b2, int b3);
 };

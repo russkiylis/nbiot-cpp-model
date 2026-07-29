@@ -25,6 +25,13 @@ public:
         return Complex(re * other.re - im * other.im, re * other.im + im * other.re);
     }
 
+    // Деление
+    Complex operator/(const Complex& other) const {
+        const double d = other.re * other.re + other.im * other.im;
+        return Complex((re * other.re + im * other.im) / d,
+                        (im * other.re - re * other.im) / d);
+    }
+
     // Модуль (для анализа амплитуды)
     double abs() const {
         return std::sqrt(re * re + im * im);

@@ -10,14 +10,14 @@
 #include <algorithm>
 
 namespace {
-constexpr int            kBitCount        = 512;
-constexpr int            kFftSize         = 32;
-constexpr int            kCpLength        = 8;
-constexpr int            kStartOffset     = kCpLength;
-constexpr int            kWindowSize      = kFftSize;
-constexpr int            kStepSize        = kFftSize + kCpLength;
-constexpr int            kSubcarrierCount = 8;
-constexpr ModulationType kModulationType  = ModulationType::Bpsk;
+constexpr int kBitCount       = 512;                      // общее число бит
+constexpr int kFftSize        = 32;                       // размер ОБПФ/БПФ одного OFDM-символа
+constexpr int kCpLength       = 8;                        // длина циклического префикса 
+constexpr int kStartOffset    = 8;                        // сдвиг первого окна приёмника
+constexpr int kWindowSize     = 32;                       // окно анализа = полезной части символа
+constexpr int kStepSize       = 40;                       // шаг = полная длина символа с CP
+constexpr int kSubcarrierCount = 8;                       // число активных поднесущих
+constexpr ModulationType kModulationType = ModulationType::Bpsk; // Bpsk | Qpsk | Psk16
 }
 
 GraphDataProvider::GraphDataProvider(QObject* parent)

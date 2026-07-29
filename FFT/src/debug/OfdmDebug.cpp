@@ -1,4 +1,5 @@
 #include "BitUtils.h"
+#include "ChannelModels.h"
 #include "ComplexNumber.h"
 #include "CyclicPrefix.h"
 #include "FourierTransform.h"
@@ -19,7 +20,7 @@ constexpr ModulationType kModulationType  = ModulationType::Qpsk;
 constexpr double kH0       = 1.0;  // амплитуда прямого луча
 constexpr double kH1       = 1.0;  // амплитуда каждого эхо-луча
 constexpr int    kNumRays  = 2;    // число лучей
-constexpr int    kMaxDelay = 5;    // задержки 0,1,2,3,4,5 — нуль на sub=4 при h0=h1
+// Развёртка maxDelay (в отсчётах, дробная) задаётся в main(): 0, 0.5, 1, ..., 16
 
 // Значение пилотного символа на всех поднесущих (известно приёмнику)
 static const Complex kPilotValue = Complex(1.0, 0.0);
@@ -292,38 +293,59 @@ static void RunReceiver(const std::vector<int>& txBits,
     std::cout << "\n\n";
 }
 
-// ─── Симуляция многолучевого канала 
-// задержка между лучами одинаковая
-static std::vector<Complex> ApplyTwoRayChannel(const std::vector<Complex>& tx,
-                                                int numRays, int maxDelay) {
-    std::vector<Complex> rx(tx.size(), Complex(0.0, 0.0));
-    for (int ray = 0; ray < numRays; ray++) {
-        int    delay = (numRays > 1) ? (ray * maxDelay / (numRays - 1)) : 0;
-        double gain  = (ray == 0)    ? kH0 : kH1;
-        for (int i = delay; i < (int)tx.size(); i++) {
-            rx[i].re += gain * tx[i - delay].re;
-            rx[i].im += gain * tx[i - delay].im;
-        }
-    }
-    return rx;
+// ─── Симуляция многолучевого канала (три алгоритма из ChannelModels) ────────
+//
+// Все три обрабатывают весь конкатенированный сигнал (несколько OFDM-
+// символов подряд) целиком одним вызовом:
+//   - Cubic    — линейная свёртка, 4-точечная интерполяция Лагранжа.
+//   - SincRect — линейная свёртка, усечённый (без окна) ряд Котельникова,
+//     kSincHalfWidth отводов на каждую сторону.
+//   - Freq     — циклическая свёртка внутри блока N = ближайшая степень
+//     двойки ≥ длины буфера. Формально это отличается от "циркулярно на
+//     каждый символ отдельно", но поскольку здесь maxDelay ≤ 16 << запас
+//     нулевого дополнения (N - длина буфера, обычно многие сотни отсчётов),
+//     "хвост" заворачивается в зоны нулей и не аляйзится обратно в сигнал —
+//     при таких маленьких задержках результат численно совпадает с линейной
+//     свёрткой.
+enum class ChannelAlgo { Freq, Cubic, SincRect };
+
+constexpr int kSincHalfWidth = 8; // число отводов усечённого sinc на сторону
+
+static std::string ChannelAlgoName(ChannelAlgo algo) {
+    if (algo == ChannelAlgo::Freq)
+        return "Частотный (БПФ, фазовый поворот спектра)";
+    if (algo == ChannelAlgo::Cubic)
+        return "Временной (кубическая интерполяция Лагранжа)";
+    return "Временной (Котельников, прямоугольное окно, " +
+           std::to_string(2 * kSincHalfWidth) + " отводов)";
 }
 
-// Знаем задержку - вычисляем отклик на каждой поднесущей аналитически
-static Complex ChannelFreqResponse(int numRays, int maxDelay, int k, int N) {
+static std::vector<Complex> ApplyChannel(ChannelAlgo algo,
+                                          const std::vector<Complex>& tx,
+                                          int numRays, double maxDelay) {
+    if (algo == ChannelAlgo::Freq)
+        return ApplyMultipathChannelFreq(tx, numRays, maxDelay, kH0, kH1);
+    if (algo == ChannelAlgo::Cubic)
+        return ApplyMultipathChannelCubic(tx, numRays, maxDelay, kH0, kH1);
+    return ApplyMultipathChannelSincRect(tx, numRays, maxDelay, kH0, kH1, kSincHalfWidth);
+}
+
+// Знаем задержку - вычисляем отклик на каждой поднесущей аналитически.
+// maxDelay теперь дробный: это ИДЕАЛЬНАЯ (физическая) АЧХ канала — одна и та
+// же для всех трёх алгоритмов, т.к. все симулируют одну и ту же модель. Freq
+// реализует её точно (см. ChannelModels.cpp), Cubic и SincRect — лишь
+// приближённо (4-точечная интерполяция и усечённый sinc соответственно),
+// поэтому при эквализации по этой "known" АЧХ остаточная ошибка показывает
+// погрешность самой интерполяции каждого метода.
+static Complex ChannelFreqResponse(int numRays, double maxDelay, int k, int N) {
     Complex H(kH0, 0.0);
     for (int ray = 1; ray < numRays; ray++) {
-        int    delay = ray * maxDelay / (numRays - 1);
+        double delay = maxDelay * ray / (numRays - 1);
         double angle = 2.0 * PI * (k * delay) / N;
         H.re += kH1 * std::cos(angle);
         H.im -= kH1 * std::sin(angle);
     }
     return H;
-}
-
-static Complex ComplexDiv(const Complex& a, const Complex& b) {
-    const double d = b.re * b.re + b.im * b.im;
-    return Complex((a.re * b.re + a.im * b.im) / d,
-                   (a.im * b.re - a.re * b.im) / d);
 }
 
 struct BerResult {
@@ -339,7 +361,7 @@ struct BerResult {
 static BerResult ComputeBer(const std::vector<int>& txBits,
                              const std::vector<Complex>& signal,
                              bool equalize,
-                             int numRays, int maxDelay) {
+                             int numRays, double maxDelay) {
     const auto txChannels  = SplitChannels(txBits, kSubcarrierCount);
     const auto txModulated = ModulateChannels(txChannels, kModulationType);
 
@@ -366,7 +388,7 @@ static BerResult ComputeBer(const std::vector<int>& txBits,
             if (equalize) {
                 // Знаем задержку → вычисляем H[k] аналитически и делим
                 const Complex H = ChannelFreqResponse(numRays, maxDelay, bin, kFftSize);
-                rx = ComplexDiv(rx, H);
+                rx = rx / H;
             }
 
             Complex txSym(0, 0);
@@ -405,40 +427,8 @@ static std::vector<Complex> EstimateChannel(const std::vector<Complex>& rxSignal
     std::vector<Complex> H_est(kSubcarrierCount);
     // вычисляем Y[k] / X[k] для каждой поднесущей (X[k]=1+j0)
     for (int sub = 0; sub < kSubcarrierCount; sub++)
-        H_est[sub] = ComplexDiv(spectrum[sub * kFftSize / kSubcarrierCount], kPilotValue);
+        H_est[sub] = spectrum[sub * kFftSize / kSubcarrierCount] / kPilotValue;
     return H_est;
-}
-
-//
-static std::vector<double> PilotCrossCorr(const std::vector<Complex>& rxSignal,
-                                           const std::vector<Complex>& txPilotData) {
-    std::vector<Complex> rxPilot;
-    for (int i = 0; i < kWindowSize; i++)
-        rxPilot.push_back(rxSignal[kCpLength + i]);
-
-    std::vector<double> xcorr(kFftSize / 2, 0.0);
-    for (int tau = 0; tau < (int)xcorr.size(); tau++) {
-        Complex sum(0.0, 0.0);
-        for (int n = tau; n < kWindowSize; n++) {
-            const Complex& x = txPilotData[n - tau];
-            const Complex& y = rxPilot[n];
-            sum.re += x.re * y.re + x.im * y.im;
-            sum.im += x.re * y.im - x.im * y.re;
-        }
-        xcorr[tau] = sum.abs();
-    }
-    double maxVal = *std::max_element(xcorr.begin(), xcorr.end());
-    if (maxVal > 0.0)
-        for (auto& v : xcorr) v /= maxVal;
-    return xcorr;
-}
-
-static int MaxDelayFromCorr(const std::vector<double>& xcorr, double threshold = 0.15) {
-    int maxDelay = 0;
-    for (int tau = 0; tau < (int)xcorr.size(); tau++)
-        if (xcorr[tau] >= threshold)
-            maxDelay = tau;
-    return maxDelay;
 }
 
 // Вычисляет BER, используя оценку H[k] из пилотного символа.
@@ -467,7 +457,7 @@ static BerResult ComputeBerEstimated(const std::vector<int>& txBits,
             const int bin = sub * kFftSize / kSubcarrierCount;
             Complex rx = spectrum[static_cast<size_t>(bin)];
             if (equalize)
-                rx = ComplexDiv(rx, H_est[static_cast<size_t>(sub)]);
+                rx = rx / H_est[static_cast<size_t>(sub)];
 
             Complex txSym(0, 0);
             if (symIdx < static_cast<int>(txModulated[static_cast<size_t>(sub)].size()))
@@ -488,9 +478,10 @@ static BerResult ComputeBerEstimated(const std::vector<int>& txBits,
 
 static void RunMultipathSimulation(const std::vector<int>& txBits,
                                     const std::vector<Complex>& cleanSignal,
-                                    int maxDelay,
+                                    ChannelAlgo algo,
+                                    double maxDelay,
                                     std::ostream& out) {
-    const auto rxSignal = ApplyTwoRayChannel(cleanSignal, kNumRays, maxDelay);
+    const auto rxSignal = ApplyChannel(algo, cleanSignal, kNumRays, maxDelay);
     const BerResult noEq   = ComputeBer(txBits, rxSignal, false, kNumRays, maxDelay);
     const BerResult withEq = ComputeBer(txBits, rxSignal, true,  kNumRays, maxDelay);
 
@@ -499,74 +490,29 @@ static void RunMultipathSimulation(const std::vector<int>& txBits,
     txFull.insert(txFull.end(), pilotSymbol.begin(), pilotSymbol.end());
     txFull.insert(txFull.end(), cleanSignal.begin(), cleanSignal.end());
 
-    const auto rxFull    = ApplyTwoRayChannel(txFull, kNumRays, maxDelay);
+    const auto rxFull    = ApplyChannel(algo, txFull, kNumRays, maxDelay);
     const auto H_est     = EstimateChannel(rxFull);
     const BerResult pilotEq = ComputeBerEstimated(txBits, rxFull, true, H_est);
 
-    const std::vector<Complex> txPilotData(pilotSymbol.cbegin() + kCpLength, pilotSymbol.cend());
-    const auto xcorr    = PilotCrossCorr(rxFull, txPilotData);
-    const int  estDelay = MaxDelayFromCorr(xcorr);
-
-    out << std::fixed << std::setprecision(6);
-    out << "======== kMaxDelay = " << maxDelay << " =========\n\n";
-
-    out << "Параметры канала (лучей: " << kNumRays << "):\n";
-    for (int ray = 0; ray < kNumRays; ray++) {
-        int    delay = (kNumRays > 1) ? (ray * maxDelay / (kNumRays - 1)) : 0;
-        double gain  = (ray == 0) ? kH0 : kH1;
-        std::string label = (ray == 0) ? "прямой луч" : "эхо " + std::to_string(ray);
-        out << "  " << std::left << std::setw(12) << label
-            << " gain=" << gain << "  задержка=" << delay << " отсч.\n";
-    }
-    out << "  (CP=" << kCpLength << ", макс.задержка=" << maxDelay
-        << (maxDelay < kCpLength ? " < CP => ISI отсутствует)\n"
-                                 : " >= CP => ВОЗМОЖНА ISI!)\n");
+    out << "Алгоритм: " << ChannelAlgoName(algo) << " \n";
+    out << std::fixed << std::setprecision(2)
+        << "maxDelay = " << maxDelay << " отсч.\n\n";
+    out << std::setprecision(6);
 
     out << "Пришедший сигнал\n";
     out << "  BER = " << noEq.ber * 100.0 << " %  ("
         << noEq.errorBits << " ошибок из " << noEq.totalBits << " бит)\n";
+    // Для Cubic на дробной задержке эта эквализация намеренно использует ИДЕАЛЬНУЮ
+    // (all-pass) модель H, а не истинную АЧХ 4-точечного Лагранжа — поэтому при
+    // дробном maxDelay BER здесь может быть сильно хуже, чем "Оценка по пилоту"
+    // (которая меряет фактически применённый фильтр). Расхождение — не баг, а мера
+    // отклонения интерполятора от идеального all-pass сдвига (см. ChannelModels.h).
     out << "\nАналитически вычисленный отклик\n";
     out << "  BER = " << withEq.ber * 100.0 << " %  ("
         << withEq.errorBits << " ошибок из " << withEq.totalBits << " бит)\n";
     out << "\nОценка по пилотному символу\n";
     out << "  BER = " << pilotEq.ber * 100.0 << " %  ("
-        << pilotEq.errorBits << " ошибок из " << pilotEq.totalBits << " бит)\n";
-
-    out << "\nАЧХ канала: истинная vs. оценённая по пилоту\n";
-    out << std::left
-        << std::setw(5)  << "sub" << std::setw(5)  << "бин"
-        << std::setw(10) << "|H_true|" << std::setw(13) << "угол_true(°)"
-        << std::setw(10) << "|H_est|"  << std::setw(13) << "угол_est(°)" << "|ΔH|\n"
-        << std::string(60, '-') << "\n";
-    out << std::setprecision(4);
-    for (int sub = 0; sub < kSubcarrierCount; sub++) {
-        int     bin   = sub * kFftSize / kSubcarrierCount;
-        Complex Htrue = ChannelFreqResponse(kNumRays, maxDelay, bin, kFftSize);
-        Complex Hest  = H_est[sub];
-        double  dRe   = Htrue.re - Hest.re;
-        double  dIm   = Htrue.im - Hest.im;
-        out << std::left
-            << std::setw(5)  << sub   << std::setw(5)  << bin
-            << std::setw(10) << Htrue.abs()
-            << std::setw(13) << std::atan2(Htrue.im, Htrue.re) * 180.0 / PI
-            << std::setw(10) << Hest.abs()
-            << std::setw(13) << std::atan2(Hest.im, Hest.re) * 180.0 / PI
-            << std::sqrt(dRe * dRe + dIm * dIm) << "\n";
-    }
-
-    out << "\nОценка задержки по кросс-корреляции пилота:\n";
-    out << "  Истинная макс. задержка  = " << maxDelay  << " отсч.\n";
-    out << "  Оценённая макс. задержка = " << estDelay  << " отсч.";
-    out << (estDelay == maxDelay ? "  [точно]\n" : "  [расхождение!]\n");
-    out << "\n  τ   |R[τ]|/Rmax  пик\n  " << std::string(28, '-') << "\n";
-    for (int tau = 0; tau < (int)xcorr.size(); tau++) {
-        double v = xcorr[tau];
-        if (v < 0.02) continue;
-        out << "  " << std::setw(3) << tau << "   "
-            << std::setw(8) << v << "  "
-            << std::string((int)(v * 20.0), '*') << "\n";
-    }
-    out << "\n" << std::string(60, '=') << "\n\n";
+        << pilotEq.errorBits << " ошибок из " << pilotEq.totalBits << " бит)\n\n";
 }
 
 // ─── main ────────────────────────────────────────────────────────────────────
@@ -609,10 +555,22 @@ int main(int argc, char* argv[]) {
       << "  поднесущих=" << kSubcarrierCount << "  бит=" << kBitCount
       << "  лучей=" << kNumRays << "\n\n";
 
-    for (int d = 0; d <= 16; d++) {
-        std::cout << "\n--- kMaxDelay = " << d << " ---\n";
-        RunMultipathSimulation(bits, signal, d, f);
-        RunMultipathSimulation(bits, signal, d, std::cout);
+    // Развёртка maxDelay: 0, 0.1, ..., 4 (шаг 0.1 — подробно у малых задержек,
+    // где интереснее всего поведение на дробном сдвиге), затем 4.5, 5, ..., 16
+    // (шаг 0.5 — там нас в основном интересует переход через границу CP=8)
+    std::vector<double> delays;
+    for (double d = 0.0; d <= 4.0 + 1e-9; d += 0.1)
+        delays.push_back(d);
+    for (double d = 4.5; d <= 16.0 + 1e-9; d += 0.5)
+        delays.push_back(d);
+
+    for (ChannelAlgo algo : { ChannelAlgo::Freq, ChannelAlgo::Cubic, ChannelAlgo::SincRect }) {
+        std::cout << "\n=== Алгоритм: " << ChannelAlgoName(algo) << " ===\n";
+
+        for (double d : delays) {
+            std::cout << "  задержка=" << std::fixed << std::setprecision(1) << d << "\n";
+            RunMultipathSimulation(bits, signal, algo, d, f);
+        }
     }
 
     std::cout << "\nРезультаты записаны в " << outPath << "\n";
