@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/FFTApp">C:/Users/royal/source/repos/FFT/FFT/build/FFTApp</file>
-
-  </qresource>
-</RCC>
