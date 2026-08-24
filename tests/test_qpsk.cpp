@@ -1,6 +1,6 @@
 
 #include <gtest/gtest.h>
-#include "code/QPSK.h"
+#include "code/qpsk.h"
 #include "misc/BitUtils.h"
 #include <iostream>
 #include <fstream>
