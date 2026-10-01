@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/ResourceGridTab.qml</file>
+        <file>qml/SignalTab.qml</file>
+        <file>qml/ConfigRectangle.qml</file>
+    </qresource>
+</RCC>

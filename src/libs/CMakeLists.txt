@@ -1,0 +1,4 @@
+add_subdirectory(nbiotbackend)
+add_subdirectory(nbiotencoding)
+add_subdirectory(nbiotmisc)
+add_subdirectory(nbiotsync)
