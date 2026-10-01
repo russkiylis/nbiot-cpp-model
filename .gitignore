@@ -1,3 +1,4 @@
 **/build
+**/.idea
 .vscode/launch.json
 .DS_Store
