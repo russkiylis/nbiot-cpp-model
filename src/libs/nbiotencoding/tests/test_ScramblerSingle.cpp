@@ -35,13 +35,13 @@ TEST(test_Scrambler, SingleSequence) {
     std::cout << "\n=== РЕГИСТРЫ (первые 20 бит) ===\n";
     std::cout << "x1(1:20):  ";
     for (int i = 0; i < 20; i++) {
-        std::cout << (int)x1[i];
+        std::cout << static_cast<int>(x1[i]);
     }
     std::cout << "\n";
 
     std::cout << "x2(1:20):  ";
     for (int i = 0; i < 20; i++) {
-        std::cout << (int)x2[i];
+        std::cout << static_cast<int>(x2[i]);
     }
     std::cout << "\n";
 
@@ -49,7 +49,7 @@ TEST(test_Scrambler, SingleSequence) {
     std::cout << "\n=== GOLD SEQUENCE (первые 20 бит) ===\n";
     std::cout << "goldSeq(1:20): ";
     for (size_t i = 0; i < gold20.size(); i++) {
-        std::cout << (int)gold20[i];
+        std::cout << static_cast<int>(gold20[i]);
     }
     std::cout << "\n";
 

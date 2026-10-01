@@ -1,7 +1,7 @@
 # CMakeLists.txt для проекта NBIoT_CPP_Model.
 
-# Требуется CMake версии 3.14 или выше.
-cmake_minimum_required(VERSION 3.14)
+# Требуется CMake версии 3.16 или выше.
+cmake_minimum_required(VERSION 3.16)
 
 # Определение проекта с его названием, версией, описанием и языком программирования.
 project(NBIoT_CPP_Model
@@ -65,12 +65,23 @@ option(ENABLE_GTEST "Включить юнит-тестирование в сб�
 
 if(ENABLE_GTEST)
     enable_testing()
-    include(FetchContent)
-    FetchContent_Declare(googletest
-            GIT_REPOSITORY https://github.com/google/googletest.git
-            GIT_TAG v1.17.0
+    add_subdirectory(
+        "${CMAKE_CURRENT_SOURCE_DIR}/../third-party/googletest"
+        "${CMAKE_CURRENT_BINARY_DIR}/third-party/googletest"
+        EXCLUDE_FROM_ALL
     )
-    FetchContent_MakeAvailable(googletest)
+
+    # Подавляем предупреждения только при сборке сторонних библиотек.
+    # Их заголовки уже экспортируются GoogleTest как SYSTEM.
+    foreach(_gtest_target IN ITEMS gtest gtest_main gmock gmock_main)
+        if(TARGET ${_gtest_target})
+            target_compile_options(${_gtest_target} PRIVATE
+                "$<$<CXX_COMPILER_ID:MSVC>:/w>"
+                "$<$<CXX_COMPILER_ID:GNU,Clang,AppleClang>:-w>"
+            )
+        endif()
+    endforeach()
+    unset(_gtest_target)
 endif()
 
 add_subdirectory(libs)

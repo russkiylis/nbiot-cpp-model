@@ -108,7 +108,7 @@ TEST(test_QPSK, AllSequences) {
             
             // Вычисленные символы (первые 3)
             std::string resultStr = "";
-            for (int i = 0; i < 3 && i < (int)symbols.size(); i++) {
+            for (int i = 0; i < 3 && i < static_cast<int>(symbols.size()); i++) {
                 std::ostringstream oss;
                 oss << std::fixed << std::setprecision(4);
                 float real = symbols[i].real();

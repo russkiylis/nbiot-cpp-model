@@ -84,7 +84,6 @@ std::vector<uint8_t> TBCC::encode(const std::vector<uint8_t>& input) {
             int old_s2 = s[2];
             int old_s3 = s[3];
             int old_s4 = s[4];
-            int old_s5 = s[5];
             
             // Новые значения
             s[0] = i;       // текущий индекс (i+1 в MATLAB → i в C++)

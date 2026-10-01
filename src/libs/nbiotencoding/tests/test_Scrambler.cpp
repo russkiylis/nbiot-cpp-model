@@ -19,7 +19,7 @@ TEST(test_Scrambler, AllSequences) {
     std::string inputLine, expectedLine;
     int failed = 0;
     int lineCount = 0;
-    int totalSequences = 500;
+    unsigned int totalSequences = 500;
     int startNCellID = 1;
     int endNCellID = 20;
     
@@ -66,7 +66,7 @@ TEST(test_Scrambler, AllSequences) {
             auto result = scrambler.getScrambledBits();
             std::string result_str = BitUtils::bitVectorToString(result);
             
-            std::string expected = (lineCount <= (int)expectedLines.size()) ? expectedLines[lineCount - 1] : "";
+            std::string expected = (lineCount <= static_cast<int>(expectedLines.size())) ? expectedLines[lineCount - 1] : "";
             
             // Сохраняем первые 5 строк
             if (lineCount <= 5) {
