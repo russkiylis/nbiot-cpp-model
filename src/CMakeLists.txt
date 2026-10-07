@@ -29,6 +29,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         nbiotencoding
         nbiotmisc
         nbiotsync
+        nbiotarchitecture
         Qt5::Gui
         Qt5::Quick
         Qt5::Qml
